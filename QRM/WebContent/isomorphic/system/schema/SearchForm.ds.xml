@@ -1,0 +1,6 @@
+<DataSource ID="SearchForm" inheritsFrom="DynamicForm"
+	Constructor="SearchForm">
+	<methods>
+		<method name="search" basic="true" />
+	</methods>
+</DataSource>

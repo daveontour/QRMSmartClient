@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2008 &lt;&lt;Quay Systems Consulting>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.1.v201309091055 Build &lt;4.3.1.v20130917-1035></property>
+    <html-property name="description">QRMReportName:Incident Detail Report;QRMReportDescription:Incident Deatil Report;QRMReportType:Incident;QRMReportID:Incident Detail Report;</html-property>
+    <property name="units">in</property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Quay Risk Manager Library.rptlibrary</property>
+            <property name="namespace">Quay Risk Manager Library</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="showDescription" id="4567">
+            <text-property name="promptText">Show Description of Risk</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">false</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showCause" id="4568">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showCat" id="4569">
+            <text-property name="promptText">showCat</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showTolerance" id="4570">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showKeyDates" id="4571">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showAreaImpacted" id="4572">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showObjectives" id="4573">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showProb" id="4574">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showImpact" id="4575">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showMitPlan" id="4576">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showControls" id="4577">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showComments" id="4578">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="showConsequence" id="4579">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="QRM Database" id="5491"
+ extends="Quay Risk Manager Library.QRM Database">
+            <property name="odaDriverClass">org.apache.derby.jdbc.EmbeddedDriver</property>
+            <property name="odaURL">jdbc:derby:K:\QRM Development\eclipse\data\TEST</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Selected Incidents" id="5008"
+ extends="Quay Risk Manager Library.Selected Incidents"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Incident Risks" id="5492">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">INCIDENTID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">RISKID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">riskProjectCode</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TITLE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">RISK_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">QRM Database</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">INCIDENTID</property>
+                    <property name="nativeName">INCIDENTID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">RISKID</property>
+                    <property name="nativeName">RISKID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">riskProjectCode</property>
+                    <property name="nativeName">riskProjectCode</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">TITLE</property>
+                    <property name="nativeName">TITLE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">RISK_ID</property>
+                    <property name="nativeName">RISK_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select INCIDENTRISK.INCIDENTID, APP.INCIDENTRISK.RISKID, APP.RISK.riskProjectCode,APP.RISK.TITLE, APP.RISK.RISK_ID
+from APP.INCIDENTRISK JOIN RISK ON RISK.RISK_ID = INCIDENTRISK.RISKID]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Incident Objectives" id="5668">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">INCIDENTID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">OBJECTIVEID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">OBJECTIVE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">OBJECTIVE_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">QRM Database</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">INCIDENTID</property>
+                    <property name="nativeName">INCIDENTID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">OBJECTIVEID</property>
+                    <property name="nativeName">OBJECTIVEID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">OBJECTIVE</property>
+                    <property name="nativeName">OBJECTIVE</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">OBJECTIVE_ID</property>
+                    <property name="nativeName">OBJECTIVE_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select APP.INCIDENTOBJECTIVE.INCIDENTID, APP.INCIDENTOBJECTIVE.OBJECTIVEID, OBJECTIVE.OBJECTIVE, OBJECTIVE.OBJECTIVE_ID FROM INCIDENTOBJECTIVE
+ JOIN OBJECTIVE ON OBJECTIVE.OBJECTIVE_ID = INCIDENTOBJECTIVE.OBJECTIVEID]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Incident Consequences" id="5705">
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">INCIDENTID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">TYPEID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DESCRIPTION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">VALUE</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">TYPEDESC</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">COSTCATEGROY</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">TYPE_ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">QRM Database</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">INCIDENTID</property>
+                    <property name="nativeName">INCIDENTID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">TYPEID</property>
+                    <property name="nativeName">TYPEID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DESCRIPTION</property>
+                    <property name="nativeName">DESCRIPTION</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">VALUE</property>
+                    <property name="nativeName">VALUE</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">TYPEDESC</property>
+                    <property name="nativeName">TYPEDESC</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">COSTCATEGROY</property>
+                    <property name="nativeName">COSTCATEGROY</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">TYPE_ID</property>
+                    <property name="nativeName">TYPE_ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select APP.INCIDENTCONSEQ.INCIDENTID, APP.INCIDENTCONSEQ.TYPEID,APP.INCIDENTCONSEQ.DESCRIPTION,APP.INCIDENTCONSEQ.VALUE, APP.QUANTIMPACTTYPE.DESCRIPTION AS TYPEDESC ,APP.QUANTIMPACTTYPE.COSTCATEGROY,APP.QUANTIMPACTTYPE.TYPE_ID FROM INCIDENTCONSEQ
+ join QUANTIMPACTTYPE ON QUANTIMPACTTYPE.TYPE_ID = INCIDENTCONSEQ.TYPEID]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="crosstab-cell" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="Sub Heading" id="1351">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#0000FF</property>
+            <property name="paddingTop">10pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.5in</property>
+            <property name="leftMargin">0.5in</property>
+            <property name="bottomMargin">0.5in</property>
+            <property name="rightMargin">0.5in</property>
+            <property name="showHeaderOnFirst">false</property>
+            <page-header>
+                <text-data id="930">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="paddingTop">2pt</property>
+                    <property name="paddingBottom">2pt</property>
+                    <property name="paddingRight">5pt</property>
+                    <property name="textAlign">right</property>
+                    <expression name="valueExpr">"Incident Detail Report"</expression>
+                    <property name="contentType">html</property>
+                </text-data>
+            </page-header>
+            <page-footer>
+                <grid id="1278">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="width">100%</property>
+                    <column id="1279">
+                        <property name="width">4.770833333333333in</property>
+                    </column>
+                    <column id="1295">
+                        <property name="width">1.4479166666666667in</property>
+                    </column>
+                    <column id="1280"/>
+                    <row id="1281">
+                        <cell id="1282">
+                            <text id="4921">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Created on: <value-of>new Date()</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="1294">
+                            <label id="1296">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">Quay Risk Manager</text-property>
+                            </label>
+                        </cell>
+                        <cell id="1283">
+                            <text-data id="1285">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="textAlign">right</property>
+                                <expression name="valueExpr">"Licensed to: "+params["Company"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="Heading1" id="5007">
+            <property name="canShrink">false</property>
+            <property name="width">100%</property>
+            <column id="3967"/>
+            <column id="3968"/>
+            <row id="3969">
+                <property name="backgroundColor">#EAEAEA</property>
+                <cell id="3970">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">10pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">10pt</property>
+                    <label id="19">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">Incident Detail Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <table id="5445">
+            <property name="width">100%</property>
+            <property name="dataSet">Selected Incidents</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">INCIDENTID</property>
+                    <expression name="expression">dataSetRow["INCIDENTID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">DATEENTERED</property>
+                    <expression name="expression">dataSetRow["DATEENTERED"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">DATEUPDATED</property>
+                    <expression name="expression">dataSetRow["DATEUPDATED"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTEXTID</property>
+                    <expression name="expression">dataSetRow["CONTEXTID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">TITLE</property>
+                    <expression name="expression">dataSetRow["TITLE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DESCRIPTION</property>
+                    <expression name="expression">dataSetRow["DESCRIPTION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LESSONSLEARNT</property>
+                    <expression name="expression">dataSetRow["LESSONSLEARNT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CONTROLS</property>
+                    <expression name="expression">dataSetRow["CONTROLS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DATEINCIDENT</property>
+                    <expression name="expression">dataSetRow["DATEINCIDENT"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">DATESTAKEHOLDERSNOTIFIED</property>
+                    <expression name="expression">dataSetRow["DATESTAKEHOLDERSNOTIFIED"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPTIME</property>
+                    <expression name="expression">dataSetRow["IMPTIME"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPSPEC</property>
+                    <expression name="expression">dataSetRow["IMPSPEC"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPENVIRON</property>
+                    <expression name="expression">dataSetRow["IMPENVIRON"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPCOST</property>
+                    <expression name="expression">dataSetRow["IMPCOST"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPSAFETY</property>
+                    <expression name="expression">dataSetRow["IMPSAFETY"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">IMPREPUTATION</property>
+                    <expression name="expression">dataSetRow["IMPREPUTATION"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">NOTIFYSTAKEHOLDERSENTERED</property>
+                    <expression name="expression">dataSetRow["NOTIFYSTAKEHOLDERSENTERED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">NOTIFYSTAKEHOLDERSUPDATE</property>
+                    <expression name="expression">dataSetRow["NOTIFYSTAKEHOLDERSUPDATE"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">STAKEHOLDERNOTIFIED</property>
+                    <expression name="expression">dataSetRow["STAKEHOLDERNOTIFIED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BIDENTIFIED</property>
+                    <expression name="expression">dataSetRow["BIDENTIFIED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BCAUSES</property>
+                    <expression name="expression">dataSetRow["BCAUSES"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BRATED</property>
+                    <expression name="expression">dataSetRow["BRATED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BCONTROL</property>
+                    <expression name="expression">dataSetRow["BCONTROL"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BMITIGATED</property>
+                    <expression name="expression">dataSetRow["BMITIGATED"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">BREVIEWS</property>
+                    <expression name="expression">dataSetRow["BREVIEWS"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">REPORTEDBYID</property>
+                    <expression name="expression">dataSetRow["REPORTEDBYID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">REPORTEDBYSTR</property>
+                    <expression name="expression">dataSetRow["REPORTEDBYSTR"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ID</property>
+                    <expression name="expression">dataSetRow["ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">SESSIONID</property>
+                    <expression name="expression">dataSetRow["SESSIONID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">DATAELEMENT</property>
+                    <expression name="expression">dataSetRow["DATAELEMENT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DATASTRING</property>
+                    <expression name="expression">dataSetRow["DATASTRING"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RANK</property>
+                    <expression name="expression">dataSetRow["RANK"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">DATABLOB</property>
+                    <expression name="expression">dataSetRow["DATABLOB"]</expression>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="name">IMAGEBLOB1</property>
+                    <expression name="expression">dataSetRow["IMAGEBLOB1"]</expression>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="name">IMAGEBLOB2</property>
+                    <expression name="expression">dataSetRow["IMAGEBLOB2"]</expression>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="name">DATAID</property>
+                    <expression name="expression">dataSetRow["DATAID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+            </list-property>
+            <column id="5452"/>
+            <header>
+                <row id="5446">
+                    <cell id="5447"/>
+                </row>
+            </header>
+            <detail>
+                <row id="5448">
+                    <property name="pageBreakAfter">always</property>
+                    <cell id="5449">
+                        <grid id="5453">
+                            <property name="width">100%</property>
+                            <column id="5454">
+                                <property name="width">1.6770833333333333in</property>
+                            </column>
+                            <column id="5455"/>
+                            <row id="5457">
+                                <cell id="5458">
+                                    <label id="5486">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Title:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5459">
+                                    <data id="5469">
+                                        <property name="fontSize">small</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <property name="resultSetColumn">TITLE</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5461">
+                                <cell id="5462">
+                                    <label id="5487">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Date of Incident:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5463">
+                                    <data id="5475">
+                                        <property name="fontSize">small</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <structure name="dateTimeFormat">
+                                            <property name="category">Long Date</property>
+                                            <property name="pattern">Long Date</property>
+                                        </structure>
+                                        <property name="resultSetColumn">DATEINCIDENT</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5480">
+                                <cell id="5481">
+                                    <label id="5488">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Reported By:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5482">
+                                    <data id="5484">
+                                        <property name="fontSize">small</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <property name="resultSetColumn">REPORTEDBYSTR</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5476">
+                                <cell id="5477">
+                                    <label id="5489">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Description of Incident:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5478">
+                                    <data id="5470">
+                                        <property name="fontSize">small</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <property name="resultSetColumn">DESCRIPTION</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5471">
+                                <cell id="5472">
+                                    <label id="5490">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Lessons Learnt:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5473">
+                                    <data id="5485">
+                                        <property name="fontSize">small</property>
+                                        <property name="marginTop">0pt</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <property name="resultSetColumn">LESSONSLEARNT</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5531">
+                                <cell id="5532">
+                                    <label id="5535">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Controls In Place:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5533">
+                                    <data id="5534">
+                                        <property name="fontSize">small</property>
+                                        <property name="paddingLeft">10pt</property>
+                                        <property name="resultSetColumn">CONTROLS</property>
+                                    </data>
+                                </cell>
+                            </row>
+                            <row id="5536">
+                                <cell id="5537">
+                                    <label id="5539">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Impacted Areas:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5538">
+                                    <grid id="5540">
+                                        <property name="marginTop">0pt</property>
+                                        <property name="marginLeft">10pt</property>
+                                        <property name="width">100%</property>
+                                        <column id="5541">
+                                            <property name="textAlign">center</property>
+                                            <property name="width">10mm</property>
+                                        </column>
+                                        <column id="5542">
+                                            <property name="width">40mm</property>
+                                        </column>
+                                        <column id="5543">
+                                            <property name="textAlign">center</property>
+                                            <property name="width">10mm</property>
+                                        </column>
+                                        <column id="5544">
+                                            <property name="width">40mm</property>
+                                        </column>
+                                        <column id="5545">
+                                            <property name="textAlign">center</property>
+                                            <property name="width">10mm</property>
+                                        </column>
+                                        <column id="5546"/>
+                                        <row id="5553">
+                                            <cell id="5554">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5567">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPTIME"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5566">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPTIME"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5555">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5578">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Time</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5556">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5557">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5649">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <property name="paddingRight">15pt</property>
+                                                    <property name="textAlign">right</property>
+                                                    <text-property name="text">Quality Assurance:</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5558">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5650">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BCONTROL"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5651">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BCONTROL"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5559">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5662">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Controls operated as intended</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="5584">
+                                            <cell id="5585">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5568">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPENVIRON"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5569">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPENVIRON"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5586">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5579">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Environment</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5587">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5588">
+                                                <property name="paddingLeft">1pt</property>
+                                            </cell>
+                                            <cell id="5589">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5652">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BCAUSES"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5653">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BCAUSES"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5590">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5663">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Actual causes identified in risk</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="5597">
+                                            <cell id="5598">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5570">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPSAFETY"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5571">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPSAFETY"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5599">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5580">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Human Safety</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5600">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5601">
+                                                <property name="paddingLeft">1pt</property>
+                                            </cell>
+                                            <cell id="5602">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5654">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BMITIGATED"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5655">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BMITIGATED"]  > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5603">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5664">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Mitigation and Response Plan effective</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="5610">
+                                            <cell id="5611">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5572">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPSPEC"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5573">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPSPEC"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5612">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5581">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Specification</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5613">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5614">
+                                                <property name="paddingLeft">1pt</property>
+                                            </cell>
+                                            <cell id="5615">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5656">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BRATED"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5657">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BRATED"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5616">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5665">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Rated and assessed risk and contol correctly</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="5623">
+                                            <cell id="5624">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5574">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPCOST"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5575">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPCOST"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5625">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5582">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Cost</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5626">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5627">
+                                                <property name="paddingLeft">1pt</property>
+                                            </cell>
+                                            <cell id="5628">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5658">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BREVIEWS"]&lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5659">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BREVIEWS"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5629">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5666">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Monitoring and Review Process effective</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="5636">
+                                            <cell id="5637">
+                                                <property name="paddingLeft">1pt</property>
+                                                <image id="5576">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPREPUTATION"] > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                                <image id="5577">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["IMPREPUTATION"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5638">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5583">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Reputation</text-property>
+                                                </label>
+                                            </cell>
+                                            <cell id="5639">
+                                                <property name="paddingLeft">10pt</property>
+                                            </cell>
+                                            <cell id="5640">
+                                                <property name="paddingLeft">1pt</property>
+                                            </cell>
+                                            <cell id="5641">
+                                                <property name="paddingLeft">10pt</property>
+                                                <image id="5660">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BIDENTIFIED"] &lt; 1</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">accept.png</property>
+                                                </image>
+                                                <image id="5661">
+                                                    <list-property name="visibility">
+                                                        <structure>
+                                                            <property name="format">all</property>
+                                                            <expression name="valueExpr">row["BIDENTIFIED"]  > 0</expression>
+                                                        </structure>
+                                                    </list-property>
+                                                    <property name="source">embed</property>
+                                                    <property name="imageName">cancel.png</property>
+                                                </image>
+                                            </cell>
+                                            <cell id="5642">
+                                                <property name="paddingLeft">1pt</property>
+                                                <label id="5667">
+                                                    <property name="fontFamily">sans-serif</property>
+                                                    <property name="fontSize">small</property>
+                                                    <property name="fontWeight">bold</property>
+                                                    <text-property name="text">Risk identified and assessed correctly</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </grid>
+                                </cell>
+                            </row>
+                            <row id="5465">
+                                <cell id="5466">
+                                    <label id="5529">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Risks Impacted:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5467">
+                                    <table id="5495">
+                                        <property name="marginTop">0pt</property>
+                                        <property name="marginLeft">10pt</property>
+                                        <property name="width">100%</property>
+                                        <property name="dataSet">Incident Risks</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">INCIDENTID</property>
+                                                <text-property name="displayName">INCIDENTID</text-property>
+                                                <expression name="expression">dataSetRow["INCIDENTID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">RISKID</property>
+                                                <text-property name="displayName">RISKID</text-property>
+                                                <expression name="expression">dataSetRow["RISKID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">riskProjectCode</property>
+                                                <text-property name="displayName">riskProjectCode</text-property>
+                                                <expression name="expression">dataSetRow["riskProjectCode"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">TITLE</property>
+                                                <text-property name="displayName">TITLE</text-property>
+                                                <expression name="expression">dataSetRow["TITLE"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">RISK_ID</property>
+                                                <text-property name="displayName">RISK_ID</text-property>
+                                                <expression name="expression">dataSetRow["RISK_ID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                        </list-property>
+                                        <list-property name="filter">
+                                            <structure>
+                                                <property name="operator">eq</property>
+                                                <expression name="expr">row["INCIDENTID"]</expression>
+                                                <simple-property-list name="value1">
+                                                    <value>row._outer["INCIDENTID"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                        <column id="5525"/>
+                                        <detail>
+                                            <row id="5507">
+                                                <list-property name="highlightRules">
+                                                    <structure>
+                                                        <property name="operator">eq</property>
+                                                        <property name="backgroundColor">#C0C0C0</property>
+                                                        <expression name="testExpr">row[0]%2</expression>
+                                                        <simple-property-list name="value1">
+                                                            <value>0</value>
+                                                        </simple-property-list>
+                                                    </structure>
+                                                </list-property>
+                                                <cell id="5510">
+                                                    <text-data id="5530">
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontSize">small</property>
+                                                        <expression name="valueExpr">row["riskProjectCode"]+" - "+row["TITLE"]</expression>
+                                                        <property name="contentType">plain</property>
+                                                    </text-data>
+                                                </cell>
+                                            </row>
+                                        </detail>
+                                        <footer>
+                                            <row id="5518">
+                                                <cell id="5520"/>
+                                            </row>
+                                        </footer>
+                                    </table>
+                                </cell>
+                            </row>
+                            <row id="5701">
+                                <cell id="5702">
+                                    <label id="5704">
+                                        <property name="paddingTop">10pt</property>
+                                    </label>
+                                </cell>
+                                <cell id="5703"/>
+                            </row>
+                            <row id="5669">
+                                <cell id="5670">
+                                    <label id="5672">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="paddingTop">1pt</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Objectives Impacted:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5671">
+                                    <table id="5673">
+                                        <property name="marginTop">0pt</property>
+                                        <property name="marginLeft">15pt</property>
+                                        <property name="width">100%</property>
+                                        <property name="dataSet">Incident Objectives</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">INCIDENTID</property>
+                                                <text-property name="displayName">INCIDENTID</text-property>
+                                                <expression name="expression">dataSetRow["INCIDENTID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">OBJECTIVEID</property>
+                                                <text-property name="displayName">OBJECTIVEID</text-property>
+                                                <expression name="expression">dataSetRow["OBJECTIVEID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">OBJECTIVE</property>
+                                                <text-property name="displayName">OBJECTIVE</text-property>
+                                                <expression name="expression">dataSetRow["OBJECTIVE"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">OBJECTIVE_ID</property>
+                                                <text-property name="displayName">OBJECTIVE_ID</text-property>
+                                                <expression name="expression">dataSetRow["OBJECTIVE_ID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                        </list-property>
+                                        <list-property name="filter">
+                                            <structure>
+                                                <property name="operator">eq</property>
+                                                <expression name="expr">row["INCIDENTID"]</expression>
+                                                <simple-property-list name="value1">
+                                                    <value>row._outer["INCIDENTID"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                        <column id="5699"/>
+                                        <detail>
+                                            <row id="5683">
+                                                <list-property name="highlightRules">
+                                                    <structure>
+                                                        <property name="operator">eq</property>
+                                                        <property name="backgroundColor">#C0C0C0</property>
+                                                        <expression name="testExpr">row[0]%2</expression>
+                                                        <simple-property-list name="value1">
+                                                            <value>0</value>
+                                                        </simple-property-list>
+                                                    </structure>
+                                                </list-property>
+                                                <cell id="5688">
+                                                    <property name="paddingLeft">1pt</property>
+                                                    <data id="5689">
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontSize">small</property>
+                                                        <property name="paddingTop">1pt</property>
+                                                        <property name="resultSetColumn">OBJECTIVE</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </detail>
+                                    </table>
+                                </cell>
+                            </row>
+                            <row id="5706">
+                                <cell id="5707">
+                                    <label id="5712">
+                                        <property name="paddingTop">10pt</property>
+                                    </label>
+                                </cell>
+                                <cell id="5708"/>
+                            </row>
+                            <row id="5709">
+                                <cell id="5710">
+                                    <label id="5713">
+                                        <property name="fontFamily">sans-serif</property>
+                                        <property name="fontSize">small</property>
+                                        <property name="fontWeight">bold</property>
+                                        <property name="paddingTop">1pt</property>
+                                        <property name="textAlign">right</property>
+                                        <text-property name="text">Consequences:</text-property>
+                                    </label>
+                                </cell>
+                                <cell id="5711">
+                                    <table id="5714">
+                                        <property name="marginTop">0pt</property>
+                                        <property name="marginLeft">15pt</property>
+                                        <property name="width">100%</property>
+                                        <property name="dataSet">Incident Consequences</property>
+                                        <list-property name="boundDataColumns">
+                                            <structure>
+                                                <property name="name">INCIDENTID</property>
+                                                <text-property name="displayName">INCIDENTID</text-property>
+                                                <expression name="expression">dataSetRow["INCIDENTID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">TYPEID</property>
+                                                <text-property name="displayName">TYPEID</text-property>
+                                                <expression name="expression">dataSetRow["TYPEID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">DESCRIPTION</property>
+                                                <text-property name="displayName">DESCRIPTION</text-property>
+                                                <expression name="expression">dataSetRow["DESCRIPTION"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">VALUE</property>
+                                                <text-property name="displayName">VALUE</text-property>
+                                                <expression name="expression">dataSetRow["VALUE"]</expression>
+                                                <property name="dataType">float</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">TYPEDESC</property>
+                                                <text-property name="displayName">TYPEDESC</text-property>
+                                                <expression name="expression">dataSetRow["TYPEDESC"]</expression>
+                                                <property name="dataType">string</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">COSTCATEGROY</property>
+                                                <text-property name="displayName">COSTCATEGROY</text-property>
+                                                <expression name="expression">dataSetRow["COSTCATEGROY"]</expression>
+                                                <property name="dataType">integer</property>
+                                            </structure>
+                                            <structure>
+                                                <property name="name">TYPE_ID</property>
+                                                <text-property name="displayName">TYPE_ID</text-property>
+                                                <expression name="expression">dataSetRow["TYPE_ID"]</expression>
+                                                <property name="dataType">decimal</property>
+                                            </structure>
+                                        </list-property>
+                                        <list-property name="filter">
+                                            <structure>
+                                                <property name="operator">eq</property>
+                                                <expression name="expr">row["INCIDENTID"]</expression>
+                                                <simple-property-list name="value1">
+                                                    <value>row._outer["INCIDENTID"]</value>
+                                                </simple-property-list>
+                                            </structure>
+                                        </list-property>
+                                        <column id="5755"/>
+                                        <column id="5756">
+                                            <property name="textAlign">center</property>
+                                            <property name="width">30mm</property>
+                                        </column>
+                                        <column id="5757">
+                                            <property name="width">45mm</property>
+                                        </column>
+                                        <column id="5758">
+                                            <property name="textAlign">center</property>
+                                            <property name="width">30mm</property>
+                                        </column>
+                                        <header>
+                                            <row id="5715">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">small</property>
+                                                <property name="fontWeight">bold</property>
+                                                <cell id="5720">
+                                                    <label id="5721">
+                                                        <text-property name="text">DESCRIPTION</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="5722">
+                                                    <label id="5723">
+                                                        <text-property name="text">VALUE</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="5724">
+                                                    <label id="5725">
+                                                        <property name="textAlign">center</property>
+                                                        <text-property name="text">TYPE</text-property>
+                                                    </label>
+                                                </cell>
+                                                <cell id="5726">
+                                                    <label id="5727">
+                                                        <text-property name="text">COST CATEGROY</text-property>
+                                                    </label>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                        <detail>
+                                            <row id="5730">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">small</property>
+                                                <property name="textAlign">left</property>
+                                                <list-property name="highlightRules">
+                                                    <structure>
+                                                        <property name="operator">eq</property>
+                                                        <property name="backgroundColor">#C0C0C0</property>
+                                                        <expression name="testExpr">row[0]%2</expression>
+                                                        <simple-property-list name="value1">
+                                                            <value>0</value>
+                                                        </simple-property-list>
+                                                    </structure>
+                                                </list-property>
+                                                <cell id="5735">
+                                                    <data id="5736">
+                                                        <property name="resultSetColumn">DESCRIPTION</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="5737">
+                                                    <data id="5738">
+                                                        <property name="resultSetColumn">VALUE</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="5739">
+                                                    <data id="5740">
+                                                        <property name="textAlign">center</property>
+                                                        <property name="resultSetColumn">TYPEDESC</property>
+                                                    </data>
+                                                </cell>
+                                                <cell id="5741">
+                                                    <text-data id="5760">
+                                                        <expression name="valueExpr">(row["COSTCATEGROY"] > 0)?"Yes":"No"</expression>
+                                                        <property name="contentType">html</property>
+                                                    </text-data>
+                                                </cell>
+                                            </row>
+                                        </detail>
+                                    </table>
+                                </cell>
+                            </row>
+                        </grid>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="5450">
+                    <cell id="5451"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">accept.png</property>
+            <property name="libReference">Quay Risk Manager Library.accept.png</property>
+        </structure>
+        <structure>
+            <property name="name">cancel.png</property>
+            <property name="libReference">Quay Risk Manager Library.cancel.png</property>
+        </structure>
+    </list-property>
+</report>

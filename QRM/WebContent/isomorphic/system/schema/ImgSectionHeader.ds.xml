@@ -1,0 +1,3 @@
+<DataSource ID="ImgSectionHeader" Constructor="ImgSectionHeader"
+	inheritsFrom="SectionHeader">
+</DataSource>

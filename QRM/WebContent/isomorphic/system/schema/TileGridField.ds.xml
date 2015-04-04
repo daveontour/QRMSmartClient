@@ -1,0 +1,2 @@
+<DataSource ID="TileGridField" inheritsFrom="DetailViewerField"
+	autoIdField="name" />

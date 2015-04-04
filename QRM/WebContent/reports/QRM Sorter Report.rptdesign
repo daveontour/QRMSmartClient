@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2008 &lt;&lt;Quay Systems
+		Consulting>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.1.v201309091055 Build &lt;4.3.1.v20130917-1035></property>
+    <html-property name="description">QRMReportName:Sorter
+		Report;QRMReportDescription:Summary Risk Allocation
+		Report;QRMReportType:PROJECT;QRMReportID:Summary Risk Allocation
+		Report;</html-property>
+    <property name="units">in</property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Quay Risk Manager Library.rptlibrary</property>
+            <property name="namespace">Quay Risk Manager Library</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="userID" id="4999">
+            <text-property name="promptText">User ID</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="projectID" id="5000">
+            <text-property name="promptText">Project ID</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="descendants" id="5013">
+            <text-property name="promptText">Descendants</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">true</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+    </parameters>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Project Risks" id="6407"
+ extends="Quay Risk Manager Library.Project Risks"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="ChildRiskDetail" id="6425"
+ extends="Quay Risk Manager Library.ChildRiskDetail"/>
+    </data-sets>
+    <styles>
+        <style name="crosstab-cell" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="Sub-Heading" id="1351">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontWeight">bold</property>
+            <property name="color">#0000FF</property>
+            <property name="paddingTop">10pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="QRM Master Page" id="6389" extends="Quay Risk Manager Library.QRM Master Page">
+            <overridden-values>
+                <ref-entry baseId="930" name="Report Title" id="930">
+                    <expression name="valueExpr">"Summary Risk Allocation Report"</expression>
+                </ref-entry>
+                <ref-entry baseId="1278" name="Footer Grid" id="1278"/>
+                <ref-entry baseId="1279" id="1279"/>
+                <ref-entry baseId="4965" id="4965"/>
+                <ref-entry baseId="1280" id="1280"/>
+                <ref-entry baseId="1281" id="1281"/>
+                <ref-entry baseId="1282" id="1282"/>
+                <ref-entry baseId="4921" name="Date" id="4921"/>
+                <ref-entry baseId="4966" id="4966"/>
+                <ref-entry baseId="1296" name="QRM Label" id="1296"/>
+                <ref-entry baseId="1283" id="1283"/>
+            </overridden-values>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="Heading1" id="5007">
+            <property name="canShrink">false</property>
+            <property name="width">100%</property>
+            <column id="3967"/>
+            <column id="3968"/>
+            <row id="3969">
+                <property name="backgroundColor">#EAEAEA</property>
+                <cell id="3970">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">10pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">10pt</property>
+                    <label id="19">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">Summary Risk Allocation Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <table name="Selected Projects Heading" id="6524" extends="Quay Risk Manager Library.Selected Projects Heading">
+            <overridden-values>
+                <ref-entry baseId="5397" id="5397"/>
+                <ref-entry baseId="5406" id="5406"/>
+                <ref-entry baseId="5398" id="5398"/>
+                <ref-entry baseId="5400" id="5400"/>
+                <ref-entry baseId="5407" id="5407"/>
+                <ref-entry baseId="5354" name="NewLabel58" id="5354"/>
+                <ref-entry baseId="5401" id="5401"/>
+                <ref-entry baseId="5402" name="NewData21" id="5402"/>
+                <ref-entry baseId="5410" id="5410"/>
+                <ref-entry baseId="5411" id="5411"/>
+                <ref-entry baseId="5238" name="NewLabel59" id="5238"/>
+                <ref-entry baseId="5412" id="5412"/>
+                <ref-entry baseId="5413" name="NewTextData131" id="5413"/>
+                <ref-entry baseId="5403" id="5403"/>
+                <ref-entry baseId="5408" id="5408"/>
+                <ref-entry baseId="5404" id="5404"/>
+                <ref-entry baseId="5409" id="5409"/>
+                <ref-entry baseId="5405" id="5405"/>
+            </overridden-values>
+        </table>
+        <table id="6455">
+            <property name="dataSet">Project Risks</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">riskID</property>
+                    <text-property name="displayName">riskID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["riskID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">riskProjectCode</property>
+                    <text-property name="displayName">riskProjectCode</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["riskProjectCode"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">title</property>
+                    <text-property name="displayName">title</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">summaryRisk</property>
+                    <text-property name="displayName">summaryRisk</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["summaryRisk"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ownerName</property>
+                    <text-property name="displayName">ownerName</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ownerName"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">row["summaryRisk"]</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="6479">
+                <property name="width">5.875in</property>
+            </column>
+            <column id="6514">
+                <property name="width">1.6145833333333333in</property>
+            </column>
+            <header>
+                <row id="6456">
+                    <cell id="6457">
+                        <label id="6515">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Risk</text-property>
+                        </label>
+                    </cell>
+                    <cell id="6509">
+                        <label id="6516">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Risk Owner</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="6465">
+                    <cell id="6466">
+                        <text-data id="6358">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="paddingTop">15pt</property>
+                            <expression name="valueExpr">row["riskProjectCode"]+" -	"+row["title"]</expression>
+                            <property name="contentType">plain</property>
+                        </text-data>
+                    </cell>
+                    <cell id="6510">
+                        <text-data id="6521">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontSize">10pt</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="marginTop">0pt</property>
+                            <property name="paddingTop">15pt</property>
+                            <property name="textAlign">center</property>
+                            <expression name="valueExpr">row["ownerName"]</expression>
+                            <property name="contentType">plain</property>
+                        </text-data>
+                    </cell>
+                </row>
+                <row id="6485">
+                    <cell id="6486">
+                        <property name="colSpan">2</property>
+                        <property name="rowSpan">1</property>
+                        <table id="6487">
+                            <property name="marginLeft">30pt</property>
+                            <property name="dataSet">ChildRiskDetail</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">parentID</property>
+                                    <text-property name="displayName">parentID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["parentID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">riskProjectCode</property>
+                                    <text-property name="displayName">riskProjectCode</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["riskProjectCode"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">title</property>
+                                    <text-property name="displayName">title</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">name</property>
+                                    <text-property name="displayName">name</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["parentID"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value>row._outer["riskID"]</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="6506">
+                                <property name="width">5.416666666666667in</property>
+                            </column>
+                            <column id="6519">
+                                <property name="width">1.5833333333333333in</property>
+                            </column>
+                            <detail>
+                                <row id="6495">
+                                    <cell id="6496">
+                                        <text-data id="6370">
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">small</property>
+                                            <expression name="valueExpr">row["riskProjectCode"]+" -	"+row["title"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                    <cell id="6517">
+                                        <text-data id="6523">
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">small</property>
+                                            <property name="textAlign">center</property>
+                                            <expression name="valueExpr">row["name"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="6502">
+                                    <cell id="6503"/>
+                                    <cell id="6518"/>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="6474">
+                    <cell id="6475"/>
+                    <cell id="6513"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">accept.png</property>
+            <property name="libReference">Quay Risk Manager Library.accept.png</property>
+        </structure>
+        <structure>
+            <property name="name">cancel.png</property>
+            <property name="libReference">Quay Risk Manager Library.cancel.png</property>
+        </structure>
+    </list-property>
+</report>

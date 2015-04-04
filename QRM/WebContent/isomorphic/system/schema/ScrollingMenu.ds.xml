@@ -1,0 +1,7 @@
+<DataSource ID="ScrollingMenu" inheritsFrom="ListGrid"
+	Constructor="ScrollingMenu">
+	<fields>
+		<field name="cancel" type="function" />
+		<field name="itemClick" type="function" />
+	</fields>
+</DataSource>

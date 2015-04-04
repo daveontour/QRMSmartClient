@@ -1,0 +1,7 @@
+<Object ID="MaskValidator" __autoConstruct="DataSource"
+	inheritsFrom="Validator" Constructor="mask" addGlobalId="false">
+	<fields>
+		<mask type="string" />
+		<transformTo type="string" />
+	</fields>
+</Object>

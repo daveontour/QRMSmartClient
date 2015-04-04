@@ -1,0 +1,246 @@
+body {
+	background: #fff;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	color: #333;
+	margin: 10;
+	padding: 0;
+	text-align: left;
+	direction: ltr;
+	unicode-bidi: embed
+}
+
+h1,h2,h3,h4,h5 {
+	font-size: 13px;
+	color: #333;
+	margin: 0;
+	padding: 0
+}
+
+h1 {
+	font-size: 14px
+}
+
+h4,h5 {
+	font-size: 11px
+}
+
+p {
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	text-align: left
+}
+
+a {
+	cursor: pointer;
+	color: #3b5998;
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}
+
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: hidden
+}
+
+.clearfix {
+	display: block
+}
+
+form {
+	margin: 0;
+	padding: 0
+}
+
+.signuplabel {
+	color: #666;
+	font-weight: bold;
+	vertical-align: middle
+}
+
+label input {
+	font-weight: normal
+}
+
+.formbuttons {
+	text-align: center;
+	margin: 10px 10px
+}
+
+.formbuttons .inputsubmit,.formbuttons .inputbutton {
+	margin: 2px 4px
+}
+
+.inputtext {
+	border: 1px solid #bdc7d8;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	padding: 3px;
+	width: 200px;
+}
+
+.inputradio {
+	padding: 0;
+	margin: 0 5px 0 0;
+	vertical-align: middle
+}
+
+.inputbutton,.inputsubmit {
+	padding: 2px 15px 3px 15px;
+	border-style: solid;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+	border-top-color: #d9dfea;
+	border-left-color: #d9dfea;
+	border-bottom-color: #0e1f5b;
+	border-right-color: #0e1f5b;
+	background-color: #3b5998;
+	color: #fff;
+	font-size: 11px;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+	text-align: center
+}
+
+.login_page .title_header {
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0
+}
+
+.login_page .login_page_spacer {
+	height: 35px
+}
+
+.login_page .title_header h2.no_icon {
+	background: transparent none repeat scroll 0;
+	margin: 0;
+	padding: 0
+}
+
+.login_page #loginform {
+	clear: left;
+	padding: 15px 0;
+	text-align: left;
+	width: 380px
+}
+
+.login_page #loginform p {
+	line-height: 16px;
+	margin: 10px 0;
+	text-align: left
+}
+
+.login_page #loginform p.reset_password {
+	margin-bottom: 0;
+	padding-bottom: 0
+}
+
+.form_row {
+	padding: 0 0 8px 0;
+	text-align: left
+}
+
+.form_row div {
+	display: block;
+	float: left;
+	padding: 3px 0;
+	width: 130px;
+	color: #666;
+	font-weight: bold;
+}
+
+.form_row input {
+	margin: 0
+}
+
+.form_row .inputtext,.inputpassword {
+	width: 95%
+}
+
+#buttons {
+	padding: 5px 0 0 130px;
+	text-align: left
+}
+
+#buttons input {
+	margin: 0 2px 0 0
+}
+
+#buttons label {
+	float: none;
+	width: auto
+}
+
+.reset_password {
+	padding-left: 130px
+}
+
+.title_header {
+	background: white;
+	padding: 20px 20px 17px
+}
+
+.title_header h2.title_h {
+	margin: 0;
+	font-size: 14px;
+	padding: 0 0 0 24px;
+}
+
+.title_header h2.no_icon {
+	background: none;
+	padding: 0
+}
+
+.title_header.add_border {
+	border-bottom: solid 1px #ccc
+}
+
+.title_header h4.title_h {
+	color: #666;
+	font-size: 11px;
+	font-weight: normal;
+	padding: 3px 0 0 24px
+}
+
+.title_header h4.no_icon {
+	padding: 3px 0 0 0
+}
+
+.Box_Container {
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.MessageBox {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid
+}
+
+.status {
+	background-color: #3b5998;
+	color: #fff
+}
+
+.main_message {
+	color: white;
+	font-size: 24px;
+}
+
+.inputbutton,.inputsubmit {
+	width: 1;
+	overflow: visible;
+	padding: 2px 15px;
+	background-color: #06C;
+}

@@ -1,0 +1,2 @@
+<DataSource ID="ToolStripResizer" inheritsFrom="ImgSplitbar"
+	Constructor="ToolStripResizer" />

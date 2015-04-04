@@ -1,0 +1,2 @@
+<DataSource ID="DateTimeItem" inheritsFrom="DateItem"
+	Constructor="DateTimeItem" />

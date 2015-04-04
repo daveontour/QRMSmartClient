@@ -1,0 +1,2 @@
+<DataSource ID="ToolStripSeparator" inheritsFrom="Img"
+	Constructor="ToolStripSeparator" />

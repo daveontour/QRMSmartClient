@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="author">Dave Burton</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.1.v201309091055 Build &lt;4.3.1.v20130917-1035></property>
+    <text-property name="title">Project Summary</text-property>
+    <html-property name="description">QRMReportName:Project Summary Report;QRMReportDescription:Project Summary Report;QRMReportType:Context;QRMReportID:Project Summary Report;</html-property>
+    <property name="units">mm</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Quay Risk Manager Library.rptlibrary</property>
+            <property name="namespace">Quay Risk Manager Library</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="QRM Database" id="1227"
+ extends="Quay Risk Manager Library.QRM Database"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Selected Contexts" id="1228"
+ extends="Quay Risk Manager Library.Selected Contexts"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Sub Context" id="1229"
+ extends="Quay Risk Manager Library.Sub Context"/>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0in</property>
+            <property name="leftMargin">0.5in</property>
+            <property name="bottomMargin">0.25in</property>
+            <property name="rightMargin">0.25in</property>
+            <property name="showHeaderOnFirst">false</property>
+            <page-header>
+                <text-data id="930">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="paddingTop">2pt</property>
+                    <property name="paddingBottom">2pt</property>
+                    <property name="paddingRight">5pt</property>
+                    <property name="textAlign">right</property>
+                    <expression name="valueExpr">"Project Summary Report"</expression>
+                    <property name="contentType">html</property>
+                </text-data>
+            </page-header>
+            <page-footer>
+                <grid id="1278">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="width">100%</property>
+                    <column id="1279">
+                        <property name="width">4.770833333333333in</property>
+                    </column>
+                    <column id="1295">
+                        <property name="width">1.4479166666666667in</property>
+                    </column>
+                    <column id="1280"/>
+                    <row id="1281">
+                        <cell id="1282">
+                            <text id="4921">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Created on: <value-of>new Date()</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="1294">
+                            <label id="1296">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">Quay Risk Manager</text-property>
+                            </label>
+                        </cell>
+                        <cell id="1283">
+                            <text-data id="1285">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="textAlign">right</property>
+                                <expression name="valueExpr">"Licensed to: "+params["Company"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="175">
+            <property name="width">100%</property>
+            <column id="176">
+                <property name="width">3.885in</property>
+            </column>
+            <column id="177">
+                <property name="width">3.145in</property>
+            </column>
+            <row id="178">
+                <property name="backgroundColor">#EAEAEA</property>
+                <cell id="179">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">10pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">10pt</property>
+                    <label id="19">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">Project Summary Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <table id="1230">
+            <property name="width">100%</property>
+            <property name="dataSet">Selected Contexts</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">PROJECT_ID</property>
+                    <expression name="expression">dataSetRow["PROJECT_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">PARENT_ID</property>
+                    <expression name="expression">dataSetRow["PARENT_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">LFT</property>
+                    <expression name="expression">dataSetRow["LFT"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">RGT</property>
+                    <expression name="expression">dataSetRow["RGT"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTRISKMANAGER_ID</property>
+                    <expression name="expression">dataSetRow["PROJECTRISKMANAGER_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">DATE_ENTERED</property>
+                    <expression name="expression">dataSetRow["DATE_ENTERED"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">DATE_UPDATED</property>
+                    <expression name="expression">dataSetRow["DATE_UPDATED"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTDESCRIPTION</property>
+                    <expression name="expression">dataSetRow["PROJECTDESCRIPTION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTTITLE</property>
+                    <expression name="expression">dataSetRow["PROJECTTITLE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTSTARTDATE</property>
+                    <expression name="expression">dataSetRow["PROJECTSTARTDATE"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTENDDATE</property>
+                    <expression name="expression">dataSetRow["PROJECTENDDATE"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">PROJECTCODE</property>
+                    <expression name="expression">dataSetRow["PROJECTCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TABSTOUSE</property>
+                    <expression name="expression">dataSetRow["TABSTOUSE"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">RISKINDEX</property>
+                    <expression name="expression">dataSetRow["RISKINDEX"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">STAKEHOLDER_ID</property>
+                    <expression name="expression">dataSetRow["STAKEHOLDER_ID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">NAME</property>
+                    <expression name="expression">dataSetRow["NAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">TITLE</property>
+                    <expression name="expression">dataSetRow["TITLE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">INITIALS</property>
+                    <expression name="expression">dataSetRow["INITIALS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DEPARTMENT</property>
+                    <expression name="expression">dataSetRow["DEPARTMENT"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">LOCATION</property>
+                    <expression name="expression">dataSetRow["LOCATION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EMAIL</property>
+                    <expression name="expression">dataSetRow["EMAIL"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ALLOWUSERMGMT</property>
+                    <expression name="expression">dataSetRow["ALLOWUSERMGMT"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">LASTLOGON</property>
+                    <expression name="expression">dataSetRow["LASTLOGON"]</expression>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="name">ACTIVE</property>
+                    <expression name="expression">dataSetRow["ACTIVE"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">ALLOWLOGON</property>
+                    <expression name="expression">dataSetRow["ALLOWLOGON"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">OFFICEPHONE</property>
+                    <expression name="expression">dataSetRow["OFFICEPHONE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MOBILEPHONE</property>
+                    <expression name="expression">dataSetRow["MOBILEPHONE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EMAILMSGTYPES</property>
+                    <expression name="expression">dataSetRow["EMAILMSGTYPES"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">DATE_ENTERED_30</property>
+                    <expression name="expression">dataSetRow["DATE_ENTERED_30"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">DATE_UPDATED_31</property>
+                    <expression name="expression">dataSetRow["DATE_UPDATED_31"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+            <column id="1255">
+                <property name="width">2.1979166666666665in</property>
+            </column>
+            <column id="1257">
+                <property name="width">1.96875in</property>
+            </column>
+            <column id="1258">
+                <property name="width">1.5208333333333333in</property>
+            </column>
+            <column id="1259">
+                <property name="width">1.4375in</property>
+            </column>
+            <column id="1260">
+                <property name="width">1.0625in</property>
+            </column>
+            <column id="1261"/>
+            <header>
+                <row id="1231">
+                    <cell id="1232">
+                        <label id="450">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Project</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1234">
+                        <label id="451">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Description</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1235">
+                        <label id="452">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Risk Manager</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1236">
+                        <label id="453">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Start Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1237">
+                        <label id="454">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Estimated End Date</text-property>
+                        </label>
+                    </cell>
+                    <cell id="1238">
+                        <label id="1074">
+                            <property name="fontFamily">sans-serif</property>
+                            <property name="fontWeight">normal</property>
+                            <property name="paddingTop">1pt</property>
+                            <property name="textAlign">center</property>
+                            <text-property name="text">Immediate Sub Projects</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="1239">
+                    <list-property name="highlightRules">
+                        <structure>
+                            <property name="operator">is-true</property>
+                            <property name="backgroundColor">#C0C0C0</property>
+                            <expression name="testExpr">row[0]%2 == 0</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="1240">
+                        <text-data id="1277">
+                            <property name="fontSize">small</property>
+                            <expression name="valueExpr">row["PROJECTCODE"]+" - "+row["PROJECTTITLE"]</expression>
+                            <property name="contentType">html</property>
+                        </text-data>
+                    </cell>
+                    <cell id="1242">
+                        <data id="1264">
+                            <property name="fontSize">small</property>
+                            <property name="resultSetColumn">PROJECTDESCRIPTION</property>
+                        </data>
+                    </cell>
+                    <cell id="1243">
+                        <data id="1265">
+                            <property name="fontSize">small</property>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">NAME</property>
+                        </data>
+                    </cell>
+                    <cell id="1244">
+                        <data id="1266">
+                            <property name="fontSize">small</property>
+                            <structure name="dateTimeFormat">
+                                <property name="category">Long Date</property>
+                                <property name="pattern">Long Date</property>
+                            </structure>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">PROJECTSTARTDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="1245">
+                        <data id="1267">
+                            <property name="fontSize">small</property>
+                            <structure name="dateTimeFormat">
+                                <property name="category">Long Date</property>
+                                <property name="pattern">Long Date</property>
+                            </structure>
+                            <property name="textAlign">center</property>
+                            <property name="resultSetColumn">PROJECTENDDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="1246">
+                        <table id="1268">
+                            <property name="width">100%</property>
+                            <property name="dataSet">Sub Context</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">PROJECT_ID</property>
+                                    <expression name="expression">dataSetRow["PROJECT_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PARENT_ID</property>
+                                    <expression name="expression">dataSetRow["PARENT_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">LFT</property>
+                                    <expression name="expression">dataSetRow["LFT"]</expression>
+                                    <property name="dataType">integer</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">RGT</property>
+                                    <expression name="expression">dataSetRow["RGT"]</expression>
+                                    <property name="dataType">integer</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTRISKMANAGER_ID</property>
+                                    <expression name="expression">dataSetRow["PROJECTRISKMANAGER_ID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">DATE_ENTERED</property>
+                                    <expression name="expression">dataSetRow["DATE_ENTERED"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">DATE_UPDATED</property>
+                                    <expression name="expression">dataSetRow["DATE_UPDATED"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTDESCRIPTION</property>
+                                    <expression name="expression">dataSetRow["PROJECTDESCRIPTION"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTTITLE</property>
+                                    <expression name="expression">dataSetRow["PROJECTTITLE"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTSTARTDATE</property>
+                                    <expression name="expression">dataSetRow["PROJECTSTARTDATE"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTENDDATE</property>
+                                    <expression name="expression">dataSetRow["PROJECTENDDATE"]</expression>
+                                    <property name="dataType">date-time</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">PROJECTCODE</property>
+                                    <expression name="expression">dataSetRow["PROJECTCODE"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">TABSTOUSE</property>
+                                    <expression name="expression">dataSetRow["TABSTOUSE"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">RISKINDEX</property>
+                                    <expression name="expression">dataSetRow["RISKINDEX"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr">row["PARENT_ID"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value>row._outer["PROJECT_ID"]</value>
+                                    </simple-property-list>
+                                </structure>
+                            </list-property>
+                            <column id="1275"/>
+                            <detail>
+                                <row id="1271">
+                                    <cell id="1272">
+                                        <text-data id="1276">
+                                            <property name="fontSize">small</property>
+                                            <expression name="valueExpr">row["PROJECTCODE"]+" - "+row["PROJECTTITLE"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                            </detail>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="1247">
+                    <cell id="1248"/>
+                    <cell id="1250"/>
+                    <cell id="1251"/>
+                    <cell id="1252"/>
+                    <cell id="1253"/>
+                    <cell id="1254"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

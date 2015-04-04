@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+  <display-name>Quay Risk Manager - Web Client Server</display-name>
+
+
+  <servlet>
+    <display-name>QRM Report Server</display-name>
+    <servlet-name>QRMReportServer</servlet-name>
+    <servlet-class>au.com.quaysystems.qrm.server.QRMReportServer</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QRMReportServer</servlet-name>
+    <url-pattern>/QRMReportServer</url-pattern>
+  </servlet-mapping>
+</web-app>

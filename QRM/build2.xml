@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="QRM">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../Program Files/eclipse"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="EAR Libraries.libraryclasspath"/>
+    <path id="Web App Libraries.libraryclasspath">
+        <pathelement location="WebContent/WEB-INF/lib/SimpleCaptcha-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/Tidy.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/activation.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/activeio-core-3.1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/activemq-all-5.6.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/activemq-spring-5.6.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/activemq-web-5.6.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/antlr-2.7.6.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/antlr-2.7.7.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/apache-log4j-extras-1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/axis-ant.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/axis.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/c3p0-0.9.1.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/com.ibm.icu_50.1.1.v201304230130.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/com.lowagie.text_2.1.7.v201004222200.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-beanutils-1.9.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-cli-1.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-codec-1_3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-dbcp-1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-discovery-0.2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-fileupload-1.2.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-io-1.4.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-jxpath-1_2.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-lang3-3.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/commons-pool-1_3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/connector.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/dsn.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/flute.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/hibernate-c3p0-4.2.17.Final.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/hibernate-commons-annotations-4.0.2.Final.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/hibernate-core-4.2.17.Final.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/hibernate3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/imap.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javassist-3.12.0.GA.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javassist-3.18.1-GA.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javax.wsdl_1.5.1.v201012040544.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/javax.xml.stream_1.0.1.v201004272200.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jaxb-api.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jaxb-impl.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jaxrpc.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jboss-logging-3.1.0.GA.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jcommon-1.0.16.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jettison-1.0.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jfreechart-1.0.13.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/js.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/json_simple-1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jsr173_1.0_api.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/jta-1.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/log4j-1.2.14.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/loremipsum-1.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mail.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mailapi.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/modelodaapi.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mpxj.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/mysql-connector-java-5.1.7-bin.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/opencsv-2.3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.bridge_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.css_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.dom.svg_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.dom_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.ext.awt_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.parser_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.pdf_1.6.0.v201105071520.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.svggen_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.transcoder_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.util.gui_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.util_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.batik.xml_1.6.0.v201011041432.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.commons.codec_1.3.0.v201101211617.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.poi_3.9.0.v201303080712.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.xerces_2.9.0.v201101211617.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.xml.resolver_1.2.0.v201005080400.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.apache.xml.serializer_2.7.1.v201005080400.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.birt.runtime_4.3.0.v20130613-1152.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.contenttype_3.4.200.v20130326-1255.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.expressions_3.4.500.v20130515-1343.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.filesystem_1.4.0.v20130514-1240.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.resources_3.8.100.v20130521-2026.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.console.profile_1.0.10.v201109250955.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.db.generic_1.0.1.v201107221459.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.dbdefinition.genericJDBC_1.0.1.v201107221459.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.oda.consumer_3.2.6.v201305170644.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.oda.design_3.3.6.v201212070447.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.oda.flatfile_3.1.5.v201305221644.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.oda.profile_3.2.8.v201209080429.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.oda_3.4.0.v201305170924.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity.sqm.core_1.2.6.v201212070447.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.connectivity_1.2.8.v201305301230.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.enablement.mysql.dbdefinition_1.0.4.v201109022331.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.enablement.mysql_1.0.4.v201212120617.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.enablement.oda.ws_1.2.5.v201305031101.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.enablement.oda.xml_1.2.5.v201305031101.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.modelbase.dbdefinition_1.0.2.v201107221519.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.modelbase.derby_1.0.0.v201107221519.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.modelbase.sql.query_1.1.4.v201212120619.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.datatools.modelbase.sql_1.0.6.v201208230744.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.emf.common_2.9.0.v20130528-0742.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.emf.ecore.change_2.9.0.v20130528-0742.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.emf.ecore.xmi_2.9.0.v20130528-0742.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.emf.ecore_2.9.0.v20130528-0742.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.emf_2.6.0.v20130610-0406.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.equinox.app_1.3.100.v20130327-1442.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.equinox.preferences_3.5.100.v20130422-1538.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.equinox.registry_3.5.300.v20130327-1442.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.orbit.mongodb_2.10.1.v20130422-1135.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.osgi.services_3.3.100.v20130513-1956.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.osgi_3.9.0.v20130529-1710.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.eclipse.update.configurator_3.3.200.v20130326-1319.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.objectweb.asm-3.1.0.v200803061910.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.w3c.css.sac_1.3.0.v200805290154.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.w3c.dom.smil_1.0.0.v200806040011.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/org.w3c.dom.svg_1.1.0.v201011041433.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/pop3.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/providerutil.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/saaj.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/scheduling.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/servlet-api-3.0.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/smtp.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-aop-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-asm-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-beans-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-context-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-core-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-expression-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-web-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/spring-webmvc-3.0.6.RELEASE.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/viewservlets.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/wsdl4j.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xbean-spring-3.9.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xercesImpl.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xml-apis.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xpp3_min-1.1.3.4.O.jar"/>
+        <pathelement location="WebContent/WEB-INF/lib/xstream-1.3.1.jar"/>
+        <pathelement location="WebContent/WEB-INF/classes"/>
+    </path>
+    <path id="Server Library [Jetty v8.1] (unbound).libraryclasspath"/>
+    <path id="QRM.classpath">
+        <pathelement location="build/classes"/>
+        <path refid="EAR Libraries.libraryclasspath"/>
+        <path refid="Web App Libraries.libraryclasspath"/>
+        <path refid="Server Library [Jetty v8.1] (unbound).libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="build/classes"/>
+        <copy includeemptydirs="false" todir="build/classes">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="build/classes" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="QRM.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

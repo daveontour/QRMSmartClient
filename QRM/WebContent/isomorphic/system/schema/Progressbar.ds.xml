@@ -1,0 +1,8 @@
+<DataSource ID="Progressbar" inheritsFrom="StretchImg"
+	Constructor="Progressbar">
+	<fields>
+		<field name="length" type="positiveInteger" />
+		<field name="breadth" type="positiveInteger" />
+		<field name="percentDone" type="integerPercent" />
+	</fields>
+</DataSource>

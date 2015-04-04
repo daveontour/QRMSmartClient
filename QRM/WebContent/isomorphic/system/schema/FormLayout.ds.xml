@@ -1,0 +1,2 @@
+<DataSource ID="FormLayout" inheritsFrom="DynamicForm"
+	Constructor="FormLayout" />

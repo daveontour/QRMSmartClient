@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="author">Dave Burton</property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.1.v201309091055 Build &lt;4.3.1.v20130917-1035></property>
+    <text-property name="title">Risk Mitigation Report</text-property>
+    <property name="units">mm</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Quay Risk Manager Library.rptlibrary</property>
+            <property name="namespace">Quay Risk Manager Library</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="descendants" id="5205">
+            <property name="valueType">static</property>
+            <property name="dataType">boolean</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">True</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">check-box</property>
+            <structure name="format"/>
+        </scalar-parameter>
+        <scalar-parameter name="userID" id="5206">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">100000</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="projectID" id="5207">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">100003</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="project" id="5208">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">Test Project Name</value>
+            </simple-property-list>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Project Risks" id="4922"
+ extends="Quay Risk Manager Library.Project Risks">
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">riskID</property>
+                    <property name="nativeName">riskID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">securityUser</property>
+                    <property name="nativeName">securityUser</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">projectID</property>
+                    <property name="nativeName">projectID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">riskProjectCode</property>
+                    <property name="nativeName">riskProjectCode</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">securityLevel</property>
+                    <property name="nativeName">securityLevel</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">ownerID</property>
+                    <property name="nativeName">ownerID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">manager1ID</property>
+                    <property name="nativeName">manager1ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">manager2ID</property>
+                    <property name="nativeName">manager2ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">manager3ID</property>
+                    <property name="nativeName">manager3ID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">matrixID</property>
+                    <property name="nativeName">matrixID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">title</property>
+                    <property name="nativeName">title</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">description</property>
+                    <property name="nativeName">description</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">cause</property>
+                    <property name="nativeName">cause</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">consequences</property>
+                    <property name="nativeName">consequences</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">impSafety</property>
+                    <property name="nativeName">impSafety</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">impSpec</property>
+                    <property name="nativeName">impSpec</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">impCost</property>
+                    <property name="nativeName">impCost</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">impTime</property>
+                    <property name="nativeName">impTime</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">impReputation</property>
+                    <property name="nativeName">impReputation</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">impEnvironment</property>
+                    <property name="nativeName">impEnvironment</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">inherentProb</property>
+                    <property name="nativeName">inherentProb</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">inherentImpact</property>
+                    <property name="nativeName">inherentImpact</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">treatedProb</property>
+                    <property name="nativeName">treatedProb</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">treatedImpact</property>
+                    <property name="nativeName">treatedImpact</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">startExposure</property>
+                    <property name="nativeName">startExposure</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">endExposure</property>
+                    <property name="nativeName">endExposure</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">inherentTolerance</property>
+                    <property name="nativeName">inherentTolerance</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">treatedTolerance</property>
+                    <property name="nativeName">treatedTolerance</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">currentTolerance</property>
+                    <property name="nativeName">currentTolerance</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">subjectiveRank</property>
+                    <property name="nativeName">subjectiveRank</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">objectiveRank</property>
+                    <property name="nativeName">objectiveRank</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">levelRank</property>
+                    <property name="nativeName">levelRank</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">active</property>
+                    <property name="nativeName">active</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">treated</property>
+                    <property name="nativeName">treated</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">dateUpdated</property>
+                    <property name="nativeName">dateUpdated</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">36</property>
+                    <property name="name">timeUpdated</property>
+                    <property name="nativeName">timeUpdated</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">37</property>
+                    <property name="name">dateEntered</property>
+                    <property name="nativeName">dateEntered</property>
+                    <property name="dataType">date-time</property>
+                </structure>
+                <structure>
+                    <property name="position">38</property>
+                    <property name="name">treatmentID</property>
+                    <property name="nativeName">treatmentID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">39</property>
+                    <property name="name">dateEvalApp</property>
+                    <property name="nativeName">dateEvalApp</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">40</property>
+                    <property name="name">dateEvalRev</property>
+                    <property name="nativeName">dateEvalRev</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">41</property>
+                    <property name="name">dateIDApp</property>
+                    <property name="nativeName">dateIDApp</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">42</property>
+                    <property name="name">dateIDRev</property>
+                    <property name="nativeName">dateIDRev</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">43</property>
+                    <property name="name">dateMitApp</property>
+                    <property name="nativeName">dateMitApp</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">44</property>
+                    <property name="name">dateMitPrep</property>
+                    <property name="nativeName">dateMitPrep</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">45</property>
+                    <property name="name">dateMitRev</property>
+                    <property name="nativeName">dateMitRev</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">46</property>
+                    <property name="name">idEvalApp</property>
+                    <property name="nativeName">idEvalApp</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">47</property>
+                    <property name="name">idEvalRev</property>
+                    <property name="nativeName">idEvalRev</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">48</property>
+                    <property name="name">idIDApp</property>
+                    <property name="nativeName">idIDApp</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">49</property>
+                    <property name="name">idIDRev</property>
+                    <property name="nativeName">idIDRev</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">50</property>
+                    <property name="name">idMitApp</property>
+                    <property name="nativeName">idMitApp</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">51</property>
+                    <property name="name">idMitPrep</property>
+                    <property name="nativeName">idMitPrep</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">52</property>
+                    <property name="name">idMitRev</property>
+                    <property name="nativeName">idMitRev</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">53</property>
+                    <property name="name">treatmentAvoidance</property>
+                    <property name="nativeName">treatmentAvoidance</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">54</property>
+                    <property name="name">treatmentReduction</property>
+                    <property name="nativeName">treatmentReduction</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">55</property>
+                    <property name="name">treatmentRetention</property>
+                    <property name="nativeName">treatmentRetention</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">56</property>
+                    <property name="name">treatmentTransfer</property>
+                    <property name="nativeName">treatmentTransfer</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">57</property>
+                    <property name="name">summaryRisk</property>
+                    <property name="nativeName">summaryRisk</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">58</property>
+                    <property name="name">parentSummaryRisk</property>
+                    <property name="nativeName">parentSummaryRisk</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">59</property>
+                    <property name="name">private</property>
+                    <property name="nativeName">private</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">60</property>
+                    <property name="name">restricted</property>
+                    <property name="nativeName">restricted</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">61</property>
+                    <property name="name">pub</property>
+                    <property name="nativeName">pub</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">62</property>
+                    <property name="name">liketype</property>
+                    <property name="nativeName">liketype</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">63</property>
+                    <property name="name">likeprob</property>
+                    <property name="nativeName">likeprob</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">64</property>
+                    <property name="name">likealpha</property>
+                    <property name="nativeName">likealpha</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">65</property>
+                    <property name="name">liket</property>
+                    <property name="nativeName">liket</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">66</property>
+                    <property name="name">likepostType</property>
+                    <property name="nativeName">likepostType</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">67</property>
+                    <property name="name">likepostProb</property>
+                    <property name="nativeName">likepostProb</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">68</property>
+                    <property name="name">likepostAlpha</property>
+                    <property name="nativeName">likepostAlpha</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">69</property>
+                    <property name="name">likepostT</property>
+                    <property name="nativeName">likepostT</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">70</property>
+                    <property name="name">primCatID</property>
+                    <property name="nativeName">primCatID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">71</property>
+                    <property name="name">secCatID</property>
+                    <property name="nativeName">secCatID</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">72</property>
+                    <property name="name">estimatedContingencey</property>
+                    <property name="nativeName">estimatedContingencey</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">73</property>
+                    <property name="name">useCalculatedContingency</property>
+                    <property name="nativeName">useCalculatedContingency</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">74</property>
+                    <property name="name">preMitContingency</property>
+                    <property name="nativeName">preMitContingency</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">75</property>
+                    <property name="name">postMitContingency</property>
+                    <property name="nativeName">postMitContingency</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">76</property>
+                    <property name="name">preMitContingencyWeighted</property>
+                    <property name="nativeName">preMitContingencyWeighted</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">77</property>
+                    <property name="name">postMitContingencyWeighted</property>
+                    <property name="nativeName">postMitContingencyWeighted</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">78</property>
+                    <property name="name">contingencyPercentile</property>
+                    <property name="nativeName">contingencyPercentile</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">79</property>
+                    <property name="name">mitigationCost</property>
+                    <property name="nativeName">mitigationCost</property>
+                    <property name="dataType">float</property>
+                </structure>
+                <structure>
+                    <property name="position">80</property>
+                    <property name="name">extObject</property>
+                    <property name="nativeName">extObject</property>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="position">81</property>
+                    <property name="name">preMitImage</property>
+                    <property name="nativeName">preMitImage</property>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="position">82</property>
+                    <property name="name">postMitImage</property>
+                    <property name="nativeName">postMitImage</property>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="position">83</property>
+                    <property name="name">matImage</property>
+                    <property name="nativeName">matImage</property>
+                    <property name="dataType">blob</property>
+                </structure>
+                <structure>
+                    <property name="position">84</property>
+                    <property name="name">ownerName</property>
+                    <property name="nativeName">ownerName</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">85</property>
+                    <property name="name">manager1Name</property>
+                    <property name="nativeName">manager1Name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">86</property>
+                    <property name="name">manager2Name</property>
+                    <property name="nativeName">manager2Name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">87</property>
+                    <property name="name">manager3Name</property>
+                    <property name="nativeName">manager3Name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">88</property>
+                    <property name="name">primCatName</property>
+                    <property name="nativeName">primCatName</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">89</property>
+                    <property name="name">secCatName</property>
+                    <property name="nativeName">secCatName</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="All Risks" id="5533"
+ extends="Quay Risk Manager Library.All Risks"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Mitigation Steps" id="5536"
+ extends="Quay Risk Manager Library.Mitigation Steps"/>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Selected Contexts" id="5751"
+ extends="Quay Risk Manager Library.Selected Contexts"/>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="QRM Master Page" id="5173" extends="Quay Risk Manager Library.QRM Master Page">
+            <property name="orientation">landscape</property>
+            <overridden-values>
+                <ref-entry baseId="930" name="Report Title" id="930">
+                    <expression name="valueExpr">"Risk Project Mitigation Detail Report"</expression>
+                </ref-entry>
+                <ref-entry baseId="1278" name="Footer Grid" id="1278"/>
+                <ref-entry baseId="1279" id="1279"/>
+                <ref-entry baseId="4965" id="4965"/>
+                <ref-entry baseId="1280" id="1280"/>
+                <ref-entry baseId="1281" id="1281"/>
+                <ref-entry baseId="1282" id="1282"/>
+                <ref-entry baseId="4921" name="Date" id="4921"/>
+                <ref-entry baseId="4966" id="4966"/>
+                <ref-entry baseId="1296" name="QRM Label" id="1296"/>
+                <ref-entry baseId="1283" id="1283"/>
+            </overridden-values>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="Heading1" id="1066">
+            <property name="masterPage">QRM Master Page</property>
+            <property name="pageBreakAfter">avoid</property>
+            <property name="pageBreakBefore">avoid</property>
+            <property name="pageBreakInside">avoid</property>
+            <property name="canShrink">false</property>
+            <property name="width">100%</property>
+            <column id="3967"/>
+            <column id="3968"/>
+            <row id="3969">
+                <property name="backgroundColor">#EAEAEA</property>
+                <cell id="3970">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">0pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">10pt</property>
+                    <label id="19">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">Project Mitigation Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <table name="Selected Projects Heading" id="6185" extends="Quay Risk Manager Library.Selected Projects Heading">
+            <overridden-values>
+                <ref-entry baseId="5397" id="5397"/>
+                <ref-entry baseId="5406" id="5406"/>
+                <ref-entry baseId="5398" id="5398"/>
+                <ref-entry baseId="5400" id="5400"/>
+                <ref-entry baseId="5407" id="5407"/>
+                <ref-entry baseId="5354" name="NewLabel58" id="5354"/>
+                <ref-entry baseId="5401" id="5401"/>
+                <ref-entry baseId="5414" name="NewTextData3" id="5414"/>
+                <ref-entry baseId="5410" id="5410"/>
+                <ref-entry baseId="5411" id="5411"/>
+                <ref-entry baseId="5238" name="NewLabel59" id="5238"/>
+                <ref-entry baseId="5412" id="5412"/>
+                <ref-entry baseId="5413" name="NewTextData131" id="5413"/>
+                <ref-entry baseId="5403" id="5403"/>
+                <ref-entry baseId="5408" id="5408"/>
+                <ref-entry baseId="5415" name="NewLabel591" id="5415"/>
+                <ref-entry baseId="5404" id="5404"/>
+                <ref-entry baseId="5416" name="NewTextData14" id="5416"/>
+                <ref-entry baseId="5409" id="5409"/>
+                <ref-entry baseId="5405" id="5405"/>
+            </overridden-values>
+        </table>
+        <table id="6038">
+            <property name="width">277.01875mm</property>
+            <property name="dataSet">Selected Contexts</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">projectID</property>
+                    <text-property name="displayName">projectID</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["projectID"]</expression>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="name">projectTitle</property>
+                    <text-property name="displayName">projectTitle</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["projectTitle"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="6052">
+                <property name="width">277.01875mm</property>
+            </column>
+            <header>
+                <row id="6039">
+                    <cell id="6040"/>
+                </row>
+            </header>
+            <detail>
+                <row id="6044">
+                    <property name="pageBreakAfter">always</property>
+                    <property name="pageBreakBefore">avoid</property>
+                    <cell id="6045">
+                        <table id="6054">
+                            <property name="width">80%</property>
+                            <property name="dataSet">All Risks</property>
+                            <list-property name="boundDataColumns">
+                                <structure>
+                                    <property name="name">riskID</property>
+                                    <text-property name="displayName">riskID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["riskID"]</expression>
+                                    <property name="dataType">decimal</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">riskProjectCode</property>
+                                    <text-property name="displayName">riskProjectCode</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["riskProjectCode"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">title</property>
+                                    <text-property name="displayName">title</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["title"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">description</property>
+                                    <text-property name="displayName">description</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">projectID</property>
+                                    <text-property name="displayName">projectID</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["projectID"]</expression>
+                                    <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">Aggregation</property>
+                                    <property name="dataType">float</property>
+                                    <property name="aggregateFunction">SUM</property>
+                                    <list-property name="arguments">
+                                        <structure>
+                                            <property name="name">Expression</property>
+                                            <expression name="value" type="javascript">dataSetRow["mitigationCost"]</expression>
+                                        </structure>
+                                    </list-property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                                <structure>
+                                    <property name="name">mitPlanSummary</property>
+                                    <text-property name="displayName">mitPlanSummary</text-property>
+                                    <expression name="expression" type="javascript">dataSetRow["mitPlanSummary"]</expression>
+                                    <property name="dataType">string</property>
+                                    <property name="allowExport">true</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="filter">
+                                <structure>
+                                    <property name="operator">eq</property>
+                                    <expression name="expr" type="javascript">row["projectID"]</expression>
+                                    <simple-property-list name="value1">
+                                        <value>row._outer["projectID"]</value>
+                                    </simple-property-list>
+                                    <property name="updateAggregation">true</property>
+                                </structure>
+                            </list-property>
+                            <column id="6078">
+                                <property name="width">3.3125in</property>
+                            </column>
+                            <column id="6079">
+                                <property name="width">8.78125in</property>
+                            </column>
+                            <header>
+                                <row id="6159">
+                                    <cell id="6160">
+                                        <property name="colSpan">2</property>
+                                        <property name="rowSpan">1</property>
+                                        <text-data id="6162">
+                                            <property name="backgroundColor">black</property>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="color">white</property>
+                                            <property name="paddingTop">0pt</property>
+                                            <property name="paddingLeft">0pt</property>
+                                            <property name="paddingBottom">0pt</property>
+                                            <property name="paddingRight">0pt</property>
+                                            <expression name="valueExpr">row._outer["projectTitle"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                </row>
+                                <row id="6055">
+                                    <cell id="6056">
+                                        <label id="6083">
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="paddingTop">1pt</property>
+                                            <property name="textAlign">left</property>
+                                            <text-property name="text">Risk</text-property>
+                                        </label>
+                                    </cell>
+                                    <cell id="6058">
+                                        <label id="6158">
+                                            <property name="backgroundColor">#EAEAEA</property>
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">8pt</property>
+                                            <property name="fontWeight">bold</property>
+                                            <property name="textAlign">center</property>
+                                            <text-property name="text">Mitigation Plan</text-property>
+                                        </label>
+                                    </cell>
+                                </row>
+                            </header>
+                            <detail>
+                                <row id="6064">
+                                    <cell id="6065">
+                                        <text-data id="6082">
+                                            <property name="fontFamily">sans-serif</property>
+                                            <property name="fontSize">8pt</property>
+                                            <property name="paddingTop">16pt</property>
+                                            <expression name="valueExpr">"&lt;u style='font-weight:bold'>"+row["riskProjectCode"]+" - "+row["title"]+"&lt;/u>&lt;br/>"+row["description"]&#13;
++"&lt;br/>&lt;br/>&lt;span style='font-weight:bold'>Mitigation Plan Summary&lt;/span>&lt;br/>"+row["mitPlanSummary"]</expression>
+                                            <property name="contentType">html</property>
+                                        </text-data>
+                                    </cell>
+                                    <cell id="6067">
+                                        <table id="6101">
+                                            <property name="width">7.53125in</property>
+                                            <property name="dataSet">Mitigation Steps</property>
+                                            <list-property name="boundDataColumns">
+                                                <structure>
+                                                    <property name="name">mitstepID</property>
+                                                    <text-property name="displayName">mitstepID</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["mitstepID"]</expression>
+                                                    <property name="dataType">decimal</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">riskID</property>
+                                                    <text-property name="displayName">riskID</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["riskID"]</expression>
+                                                    <property name="dataType">decimal</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">description</property>
+                                                    <text-property name="displayName">description</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["description"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">endDate</property>
+                                                    <text-property name="displayName">endDate</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["endDate"]</expression>
+                                                    <property name="dataType">date-time</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">percentComplete</property>
+                                                    <text-property name="displayName">percentComplete</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["percentComplete"]</expression>
+                                                    <property name="dataType">float</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">mitPlanUpdate</property>
+                                                    <text-property name="displayName">mitPlanUpdate</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["mitPlanUpdate"]</expression>
+                                                    <property name="dataType">integer</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">name</property>
+                                                    <text-property name="displayName">name</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["name"]</expression>
+                                                    <property name="dataType">string</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">stakeholderID</property>
+                                                    <text-property name="displayName">stakeholderID</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["stakeholderID"]</expression>
+                                                    <property name="dataType">decimal</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">estimatedCost</property>
+                                                    <text-property name="displayName">estimatedCost</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["estCost"]</expression>
+                                                    <property name="dataType">string</property>
+                                                    <property name="allowExport">true</property>
+                                                </structure>
+                                                <structure>
+                                                    <property name="name">estCost</property>
+                                                    <text-property name="displayName">estCost</text-property>
+                                                    <expression name="expression" type="javascript">dataSetRow["estCost"]</expression>
+                                                    <property name="dataType">float</property>
+                                                </structure>
+                                            </list-property>
+                                            <list-property name="filter">
+                                                <structure>
+                                                    <property name="operator">eq</property>
+                                                    <expression name="expr" type="javascript">row["riskID"]</expression>
+                                                    <simple-property-list name="value1">
+                                                        <value>row._outer["riskID"]</value>
+                                                    </simple-property-list>
+                                                    <property name="updateAggregation">true</property>
+                                                </structure>
+                                            </list-property>
+                                            <column id="6145">
+                                                <property name="width">3.3229166666666665in</property>
+                                            </column>
+                                            <column id="6166">
+                                                <property name="width">0.90625in</property>
+                                            </column>
+                                            <column id="6150">
+                                                <property name="width">1.0833333333333333in</property>
+                                            </column>
+                                            <column id="6151">
+                                                <property name="width">1.125in</property>
+                                            </column>
+                                            <column id="6152">
+                                                <property name="width">1.0833333333333333in</property>
+                                            </column>
+                                            <header>
+                                                <row id="6102">
+                                                    <cell id="6103">
+                                                        <label id="6153">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="fontWeight">bold</property>
+                                                            <text-property name="text">Action</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="6163">
+                                                        <label id="6167">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="fontWeight">bold</property>
+                                                            <property name="textAlign">center</property>
+                                                            <text-property name="text">Cost</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="6113">
+                                                        <label id="6155">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="fontWeight">bold</property>
+                                                            <property name="textAlign">center</property>
+                                                            <text-property name="text">Assigned</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="6115">
+                                                        <label id="6156">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="fontWeight">bold</property>
+                                                            <property name="textAlign">center</property>
+                                                            <text-property name="text">% Complete</text-property>
+                                                        </label>
+                                                    </cell>
+                                                    <cell id="6117">
+                                                        <label id="6154">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="fontWeight">bold</property>
+                                                            <property name="textAlign">center</property>
+                                                            <text-property name="text">Due Date</text-property>
+                                                        </label>
+                                                    </cell>
+                                                </row>
+                                            </header>
+                                            <detail>
+                                                <row id="6119">
+                                                    <property name="height">0.25in</property>
+                                                    <cell id="6120">
+                                                        <text-data id="6157">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <expression name="valueExpr">(row[0]+1)+". "+row["description"]</expression>
+                                                            <property name="contentType">html</property>
+                                                        </text-data>
+                                                    </cell>
+                                                    <cell id="6164">
+                                                        <data id="6169">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="textAlign">center</property>
+                                                            <property name="resultSetColumn">estCost</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="6130">
+                                                        <data id="6133">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="textAlign">center</property>
+                                                            <property name="resultSetColumn">name</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="6132">
+                                                        <data id="6129">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <property name="textAlign">center</property>
+                                                            <property name="resultSetColumn">percentComplete</property>
+                                                        </data>
+                                                    </cell>
+                                                    <cell id="6134">
+                                                        <data id="6127">
+                                                            <property name="fontFamily">sans-serif</property>
+                                                            <property name="fontSize">8pt</property>
+                                                            <structure name="dateTimeFormat">
+                                                                <property name="category">Medium Date</property>
+                                                                <property name="pattern">Medium Date</property>
+                                                            </structure>
+                                                            <property name="textAlign">center</property>
+                                                            <property name="resultSetColumn">endDate</property>
+                                                        </data>
+                                                    </cell>
+                                                </row>
+                                            </detail>
+                                            <footer>
+                                                <row id="6136">
+                                                    <cell id="6137"/>
+                                                    <cell id="6165"/>
+                                                    <cell id="6142"/>
+                                                    <cell id="6143"/>
+                                                    <cell id="6144"/>
+                                                </row>
+                                            </footer>
+                                        </table>
+                                    </cell>
+                                </row>
+                            </detail>
+                            <footer>
+                                <row id="6073">
+                                    <cell id="6074"/>
+                                    <cell id="6075">
+                                        <grid id="6170">
+                                            <property name="width">100%</property>
+                                            <column id="6171">
+                                                <property name="width">3.34375in</property>
+                                            </column>
+                                            <column id="6172">
+                                                <property name="width">5.375in</property>
+                                            </column>
+                                            <row id="6176">
+                                                <cell id="6177">
+                                                    <text-data id="6178">
+                                                        <property name="backgroundColor">white</property>
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontSize">8pt</property>
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">black</property>
+                                                        <property name="paddingTop">3pt</property>
+                                                        <property name="paddingRight">5pt</property>
+                                                        <property name="textAlign">right</property>
+                                                        <expression name="valueExpr">"Total Mitigation Cost for&lt;i>"+row._outer["projectTitle"]+":&lt;/i>"</expression>
+                                                        <property name="contentType">html</property>
+                                                    </text-data>
+                                                </cell>
+                                                <cell id="6179">
+                                                    <data id="6184">
+                                                        <property name="fontFamily">sans-serif</property>
+                                                        <property name="fontSize">8pt</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </grid>
+                                    </cell>
+                                </row>
+                            </footer>
+                        </table>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="6049">
+                    <property name="height">0.23958333333333334in</property>
+                    <cell id="6050"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>

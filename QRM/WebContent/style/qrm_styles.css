@@ -1,0 +1,686 @@
+.css_btn_class {
+	font-size:16px;
+	font-family:Arial;
+	font-weight:normal;
+	-moz-border-radius:12px;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	border:1px solid #84bbf3;
+	padding:9px;
+	text-decoration:none;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #79bbff), color-stop(100%, #378de5) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+	background:-ms-linear-gradient( top, #79bbff 5%, #378de5 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+	background-color:#79bbff;
+	color:#ffffff;
+	display:inline-block;
+	text-shadow:1px 1px 0px #528ecc;
+ 	-webkit-box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+ 	-moz-box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+ 	box-shadow:inset 1px 1px 0px 0px #bbdaf7;
+ 	cursor:pointer;
+ 	cursor:hand;
+}.css_btn_class:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #378de5), color-stop(100%, #79bbff) );
+	background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+	background:-ms-linear-gradient( top, #378de5 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+	background-color:#378de5;
+}.css_btn_class:active {
+	position:relative;
+	top:1px;
+}
+
+button.qrmReportButton {
+ 	width:150px;
+ 	font-weight:bold;
+ 	font-family:Verdana,Bitstream Vera Sans,sans-serif;
+ 	font-size:8px;
+}
+.whiteText,
+.whiteTextFocused,
+.whiteTextError,
+.whiteTextDisabled {
+	color:white;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 11px;
+	font-weight: bold;	
+}
+.matrixWidgetUnTreated {
+    border:2px solid #000000;
+    color:red; 
+    padding:2px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:white;
+}
+.matrixWidgetTreated {
+    border:2px solid #000000;
+    color:blue; 
+    padding:2px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:white;
+}
+.matrixWidgetUnTreatedOver {
+    border:2px solid #000000;
+    color:red; 
+    padding:2px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:bold; background-color:white;
+}
+.matrixWidgetTreatedOver {
+    border:2px solid #000000;
+    color:blue; 
+    padding:2px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  font-weight:bold; background-color:white;
+}
+.matrixWidgetHighLight {
+    border:6px solid #000000;
+}
+
+.rankItem5,
+.rankItem5Dark
+{
+    border:1px solid #cdc8b1;
+    color:white; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#FF0000;
+}
+
+
+
+.rankItem5Over,
+.rankItem5OverDark,
+.rankItem5Selected,
+.rankItem5SelectedDark,
+.rankItem5SelectedOver,
+.rankItem5SelectedOverDark,
+.rankItem5FocusedOver,
+.rankItem5FocusedOverDark,
+.rankItem5SelectedFocused,
+.rankItem5SelectedFocusedDark,
+.rankItem5SelectedFocusedOver,
+.rankItem5SelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:white; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; background-color:#FF0000;
+}
+
+
+.rankItem4,
+.rankItem4Dark
+{
+    border:1px solid #cdc8b1;
+    color:white; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#FFA500;
+}
+
+
+
+.rankItem4Over,
+.rankItem4OverDark,
+.rankItem4Selected,
+.rankItem4SelectedDark,
+.rankItem4SelectedOver,
+.rankItem4SelectedOverDark,
+.rankItem4FocusedOver,
+.rankItem4FocusedOverDark,
+.rankItem4SelectedFocused,
+.rankItem4SelectedFocusedDark,
+.rankItem4SelectedFocusedOver,
+.rankItem4SelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:white; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; background-color:#FFA500;
+}
+
+
+.rankItem3,
+.rankItem3Dark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#FFFF00;
+}
+
+
+.rankItem3Over,
+.rankItem3OverDark,
+.rankItem3Selected,
+.rankItem3SelectedDark,
+.rankItem3SelectedOver,
+.rankItem3SelectedOverDark,
+.rankItem3FocusedOver,
+.rankItem3FocusedOverDark,
+.rankItem3SelectedFocused,
+.rankItem3SelectedFocusedDark,
+.rankItem3SelectedFocusedOver,
+.rankItem3SelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; background-color:#FFFF00;
+}
+
+.rankItem2,
+.rankItem2Dark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#00FF00;
+}
+
+
+.rankItem2Over,
+.rankItem2OverDark,
+.rankItem2Selected,
+.rankItem2SelectedDark,
+.rankItem2SelectedOver,
+.rankItem2SelectedOverDark,
+.rankItem2FocusedOver,
+.rankItem2FocusedOverDark,
+.rankItem2SelectedFocused,
+.rankItem2SelectedFocusedDark,
+.rankItem2SelectedFocusedOver,
+.rankItem2SelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; background-color:#00FF00;
+}
+
+.rankItem1,
+.rankItem1Dark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#00FFFF;
+}
+
+
+.rankItem1Over,
+.rankItem1OverDark,
+.rankItem1Selected,
+.rankItem1SelectedDark,
+.rankItem1SelectedOver,
+.rankItem1SelectedOverDark,
+.rankItem1FocusedOver,
+.rankItem1FocusedOverDark,
+.rankItem1SelectedFocused,
+.rankItem1SelectedFocusedDark,
+.rankItem1SelectedFocusedOver,
+.rankItem1SelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+	cursor:pointer;cursor:hand;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; background-color:#00FFFF;
+}
+
+.consqCostWarning,
+.consqCostWarningDark,
+.consqCostWarningOver,
+.consqCostWarningOverDark,
+.consqCostWarningSelected,
+.consqCostWarningSelectedDark,
+.consqCostWarningSelectedOver,
+.consqCostWarningSelectedOverDark,
+.consqCostWarningFocusedOver,
+.consqCostWarningFocusedOverDark,
+.consqCostWarningSelectedFocused,
+.consqCostWarningSelectedFocusedDark,
+.consqCostWarningSelectedFocusedOver,
+.consqCostWarningSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px;  background-color:#FFFF00;
+}
+
+.qrmMinorTitle {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:black; font-weight:bold; text-align:right
+}
+.qrmMinorTableContent {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:black; text-align:left; padding-left:10px; vertical-align:top 
+}
+.qrmMinorTitle12 {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:12px; color:black; font-weight:bold; text-align:right
+}
+.qrmMinorTableContent12 {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:12px; color:black; text-align:left; padding-left:10px; vertical-align:top 
+}
+
+a.qrmLink{font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:12px; color:rgb(0,0,153);cursor:pointer;color:#3b5998;text-decoration:none}
+a.qrmLink:hover{font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:12px; color:rgb(0,0,153);text-decoration:underline}
+
+.qrmMinorTitle2 {
+color: #666;
+color-interpolation: srgb;
+color-interpolation-filters: linearrgb;
+font-family: 'Myriad Pro', 'Myriad Web Pro Regular', 'Lucida Grande', Geneva, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+image-rendering: auto;
+}
+.qrmMinorTitle2Normal {
+color: #666;
+color-interpolation: srgb;
+color-interpolation-filters: linearrgb;
+font-family: 'Myriad Pro', 'Myriad Web Pro Regular', 'Lucida Grande', Geneva, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-variant: normal;
+font-weight: normal;
+image-rendering: auto;
+}
+.qrmMajorTitle {
+	color: #666;
+color-interpolation: srgb;
+color-interpolation-filters: linearrgb;
+color-rendering: auto;
+cursor: auto;
+direction: ltr;
+display: block;
+dominant-baseline: auto;
+empty-cells: show;
+fill: black;
+fill-opacity: 1;
+fill-rule: nonzero;
+filter: none;
+float: none;
+flood-color: black;
+flood-opacity: 1;
+font-family: 'Myriad Pro', 'Myriad Web Pro Regular', 'Lucida Grande', Geneva, 'Trebuchet MS', sans-serif;
+font-size: 22px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+glyph-orientation-horizontal: 0deg;
+glyph-orientation-vertical: auto;
+height: 26px;
+image-rendering: auto;
+kerning: ;
+left: auto;
+letter-spacing: normal;
+lighting-color: white;
+line-height: 26px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: disc;
+margin-bottom: 5px;
+}
+.qrmSemiMajorTitle {
+	color: #666;
+color-interpolation: srgb;
+color-interpolation-filters: linearrgb;
+color-rendering: auto;
+cursor: auto;
+direction: ltr;
+display: block;
+dominant-baseline: auto;
+empty-cells: show;
+fill: black;
+fill-opacity: 1;
+fill-rule: nonzero;
+filter: none;
+float: none;
+flood-color: black;
+flood-opacity: 1;
+font-family: 'Myriad Pro', 'Myriad Web Pro Regular', 'Lucida Grande', Geneva, 'Trebuchet MS', sans-serif;
+font-size: 18px;
+font-style: normal;
+font-variant: normal;
+font-weight: bold;
+glyph-orientation-horizontal: 0deg;
+glyph-orientation-vertical: auto;
+height: 26px;
+image-rendering: auto;
+kerning: ;
+left: auto;
+letter-spacing: normal;
+lighting-color: white;
+line-height: 26px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: disc;
+margin-bottom: 5px;
+}
+.qrmRedHeader {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:red; font-weight:bold; text-align:center
+}
+.qrmYellowHeader {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:black; font-weight:bold; text-align:center
+}
+.qrmGreenHeader {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:#00FF00; font-weight:bold; text-align:center
+}
+.qrmGrayHeader {
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; color:black; font-weight:bold; text-align:center
+}
+.qrmGreenRange,
+.qrmGreenRangeDark,
+.qrmGreenRangeOver,
+.qrmGreenRangeOverDark,
+.qrmGreenRangeSelected,
+.qrmGreenRangeSelectedDark,
+.qrmGreenRangeSelectedOver,
+.qrmGreenRangeSelectedOverDark,
+.qrmGreenRangeDisabled,
+.qrmGreenRangeDisabledDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#00FF00;
+}
+
+.qrmYellowRange,
+.qrmYellowRangeDark,
+.qrmYellowRangeOver,
+.qrmYellowRangeOverDark,
+.qrmYellowRangeSelected,
+.qrmYellowRangeSelectedDark,
+.qrmYellowRangeSelectedOver,
+.qrmYellowRangeSelectedOverDark,
+.qrmYellowRangeDisabled,
+.qrmYellowRangeDisabledDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#FFFF00;
+}
+
+.qrmRedRange,
+.qrmRedRangeDark,
+.qrmRedRangeOver,
+.qrmRedRangeOverDark,
+.qrmRedRangeSelected,
+.qrmRedRangeSelectedDark,
+.qrmRedRangeSelectedOver,
+.qrmRedRangeSelectedOverDark,
+.qrmRedRangeDisabled,
+.qrmRedRangeDisabledDark
+{
+    border:1px solid #cdc8b1;
+    color:white; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#FF0000;
+}
+
+.qrmGrayRange,
+.qrmGrayRangeDark,
+.qrmGrayRangeOver,
+.qrmGrayRangeOverDark,
+.qrmGrayRangeSelected,
+.qrmGrayRangeSelectedDark,
+.qrmGrayRangeSelectedOver,
+.qrmGrayRangeSelectedOverDark,
+.qrmGrayRangeDisabled,
+.qrmGrayRangeDisabledDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#C0C0C0;
+}
+
+
+.canEdit,
+.canEditDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#00FF00;
+}
+
+
+.canEditOver,
+.canEditOverDark,
+.canEditSelected,
+.canEditSelectedDark,
+.canEditSelectedOver,
+.canEditSelectedOverDark,
+.canEditFocusedOver,
+.canEditFocusedOverDark,
+.canEditSelectedFocused,
+.canEditSelectedFocusedDark,
+.canEditSelectedFocusedOver,
+.canEditSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:normal; font-color:white;
+    background-color:#00FF00;
+    opacity:0.8;
+}
+.canNotEdit,
+.canNotEditDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    background-color:#FF0000;
+}
+
+
+.canNotEditOver,
+.canNotEditOverDark,
+.canNotEditSelected,
+.canNotEditSelectedDark,
+.canNotEditSelectedOver,
+.canNotEditSelectedOverDark,
+.canNotEditFocusedOver,
+.canNotEditFocusedOverDark,
+.canNotEditSelectedFocused,
+.canNotEditSelectedFocusedDark,
+.canNotEditSelectedFocusedOver,
+.canNotEditSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    font-weight:normal; 
+     background-color:#FF0000;
+    opacity:0.8;
+}
+.newRecord,
+.newRecordDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    background-color:#FFFF00;
+    opacity:0.8;
+}
+
+
+.newRecordOver,
+.newRecordOverDark,
+.newRecordSelected,
+.newRecordSelectedDark,
+.newRecordSelectedOver,
+.newRecordSelectedOverDark,
+.newRecordFocusedOver,
+.newRecordFocusedOverDark,
+.newRecordSelectedFocused,
+.newRecordSelectedFocusedDark,
+.newRecordSelectedFocusedOver,
+.newRecordSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    font-weight:normal; 
+    background-color:#FFFF00;
+    opacity:1.0;
+}
+.normalRecord,
+.normalRecordDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    background-color:white;
+    opacity:0.8;
+}
+
+
+.normalRecordOver,
+.normalRecordOverDark,
+.normalRecordSelected,
+.normalRecordSelectedDark,
+.normalRecordSelectedOver,
+.normalRecordSelectedOverDark,
+.normalRecordFocusedOver,
+.normalRecordFocusedOverDark,
+.normalRecordSelectedFocused,
+.normalRecordSelectedFocusedDark,
+.normalRecordSelectedFocusedOver,
+.normalRecordSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; 
+    font-size:11px; 
+    font-weight:normal; 
+    background-color:white;
+    opacity:1.0;
+}
+
+.alertAudit,
+.alertAuditDark,
+.alertAuditOver,
+.alertAuditOverDark,
+.alertAuditSelected,
+.alertAuditSelectedDark,
+.alertAuditSelectedOver,
+.alertAuditSelectedOverDark,
+.alertAuditFocusedOver,
+.alertAuditFocusedOverDark,
+.alertAuditSelectedFocused,
+.alertAuditSelectedFocusedDark,
+.alertAuditSelectedFocusedOver,
+.alertAuditSelectedFocusedOverDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; font-weight:bold; background-color:#FF9999;
+    
+}
+
+.cellExtreme,
+.cellExtreme:link,
+.cellExtreme:visited {
+	text-align: center;
+	background-color: #F00;
+	cursor: default;
+}
+
+.cellHigh,
+.cellHigh:link,
+.cellHigh:visited {
+	text-align: center;
+	background-color: orange;
+	cursor:pointer;cursor:hand
+}
+.cellSignificant,
+.cellSignificant:link,
+.cellSignificant:visited {
+	text-align: center;
+	background-color: #FF0;
+	cursor: default;
+}
+
+.cellModerate,
+.cellModerate:link,
+.cellModerate:visited {
+	text-align: center;
+	background-color: #0F0;
+	cursor: default;
+}
+
+.cellLow,
+.cellLow:link,
+.cellLow:visited {
+	text-align: center;
+	background-color: #0FF;
+	cursor: default;
+}
+
+.cellLow:hover,
+.cellModerate:hover,
+.cellSignificant:hover,
+.cellHigh:hover,
+.cellExtreme:hover,
+.qrmCellSelected,
+.matCellHighLight
+{
+	text-align: center;
+	background-color: #9CC;
+	cursor:pointer;cursor:hand
+}
+
+.matText {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	cursor:pointer;cursor:hand
+}
+
+.qrmRiskExportEntry,
+.qrmRiskExportEntryDark,
+.qrmRiskExportEntryOver,
+.qrmRiskExportEntryOverDark,
+.qrmRiskExportEntrySelected,
+.qrmRiskExportEntrySelectedDark,
+.qrmRiskExportEntrySelectedOver,
+.qrmRiskExportEntrySelectedOverDark,
+.qrmRiskExportEntryDisabled,
+.qrmRiskExportEntryDisabledDark
+{
+    border:1px solid #cdc8b1;
+    color:black; 
+    padding:4px;
+    font-family:Verdana,Bitstream Vera Sans,sans-serif; font-size:11px; background-color:#B0E0E6;
+}
+
+.qrmToolBarButton,
+.qrmToolBarButtonDisabled
+{
+	background-color:red
+}
+

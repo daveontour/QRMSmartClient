@@ -1,0 +1,2 @@
+<DataSource ID="XJSONDataSource" inheritsFrom="DataSource"
+	Constructor="XJSONDataSource" />

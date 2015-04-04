@@ -1,0 +1,2 @@
+<DataSource ID="ReportViewer" Constructor="CubeGrid"
+	inheritsFrom="CubeGrid" />

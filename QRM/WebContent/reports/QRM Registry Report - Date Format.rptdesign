@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="comments">Copyright (c) 2008 &lt;&lt;Quay Systems
+		Consulting>></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.3.1.v201309091055 Build &lt;4.3.1.v20130917-1035></property>
+    <html-property name="description">QRMReportName:Registry Report - Date
+		Format;QRMReportDescription:Registry Report - Date
+		Format2;QRMReportType:Register;QRMReportID:Registry Report - Date
+		Format;</html-property>
+    <property name="units">in</property>
+    <text-property name="displayName">Blank Report</text-property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Quay Risk Manager Library.rptlibrary</property>
+            <property name="namespace">Quay Risk Manager Library</property>
+        </structure>
+    </list-property>
+    <styles>
+        <style name="crosstab-cell" id="4">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="topMargin">0.5in</property>
+            <property name="leftMargin">0.5in</property>
+            <property name="bottomMargin">0.5in</property>
+            <property name="rightMargin">0.5in</property>
+            <property name="showHeaderOnFirst">false</property>
+            <page-header>
+                <text-data id="930">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="paddingTop">2pt</property>
+                    <property name="paddingBottom">2pt</property>
+                    <property name="paddingRight">5pt</property>
+                    <property name="textAlign">right</property>
+                    <expression name="valueExpr">"Risk Register Report - Date Format"</expression>
+                    <property name="contentType">html</property>
+                </text-data>
+            </page-header>
+            <page-footer>
+                <grid id="1278">
+                    <property name="borderBottomColor">#000000</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">thin</property>
+                    <property name="borderLeftColor">#000000</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">thin</property>
+                    <property name="borderRightColor">#000000</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">thin</property>
+                    <property name="borderTopColor">#000000</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">thin</property>
+                    <property name="width">100%</property>
+                    <column id="1279">
+                        <property name="width">3.0833333333333335in</property>
+                    </column>
+                    <column id="3974">
+                        <property name="width">1.4479166666666667in</property>
+                    </column>
+                    <column id="1280"/>
+                    <row id="1281">
+                        <cell id="1282">
+                            <text id="4921">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="contentType">html</property>
+                                <text-property name="content"><![CDATA[Created on: <value-of>new Date()</value-of>]]></text-property>
+                            </text>
+                        </cell>
+                        <cell id="4922">
+                            <label id="1296">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="fontWeight">normal</property>
+                                <property name="textAlign">center</property>
+                                <text-property name="text">Quay Risk Manager</text-property>
+                            </label>
+                        </cell>
+                        <cell id="1283">
+                            <text-data id="1285">
+                                <property name="fontFamily">sans-serif</property>
+                                <property name="fontSize">small</property>
+                                <property name="textAlign">right</property>
+                                <expression name="valueExpr">"Licensed to: "+params["Company"]</expression>
+                                <property name="contentType">html</property>
+                            </text-data>
+                        </cell>
+                    </row>
+                </grid>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid name="Heading1" id="1066">
+            <property name="canShrink">false</property>
+            <property name="width">100%</property>
+            <column id="3967"/>
+            <column id="3968"/>
+            <row id="3969">
+                <property name="backgroundColor">#EAEAEA</property>
+                <cell id="3970">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <property name="paddingTop">10pt</property>
+                    <property name="paddingLeft">10pt</property>
+                    <property name="paddingBottom">10pt</property>
+                    <label id="19">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="textAlign">right</property>
+                        <text-property name="text">Risk Registry Report</text-property>
+                    </label>
+                </cell>
+            </row>
+        </grid>
+        <grid name="Filters" id="1185" extends="Quay Risk Manager Library.Filters">
+            <overridden-values>
+                <ref-entry baseId="370" id="370"/>
+                <ref-entry baseId="372" id="372"/>
+                <ref-entry baseId="373" id="373"/>
+                <ref-entry baseId="375" name="NewGrid" id="375"/>
+                <ref-entry baseId="376" id="376"/>
+                <ref-entry baseId="377" id="377"/>
+                <ref-entry baseId="3719" id="3719"/>
+                <ref-entry baseId="3731" id="3731">
+                    <property name="width">0.625in</property>
+                </ref-entry>
+                <ref-entry baseId="3765" id="3765"/>
+                <ref-entry baseId="3766" id="3766"/>
+                <ref-entry baseId="3779" name="NewGrid1" id="3779"/>
+                <ref-entry baseId="3780" id="3780"/>
+                <ref-entry baseId="3781" id="3781"/>
+                <ref-entry baseId="3832" id="3832">
+                    <property name="width">0.4in</property>
+                </ref-entry>
+                <ref-entry baseId="3782" id="3782"/>
+                <ref-entry baseId="3837" id="3837"/>
+                <ref-entry baseId="3842" id="3842"/>
+                <ref-entry baseId="3784" id="3784">
+                    <property name="width">0.4in</property>
+                </ref-entry>
+                <ref-entry baseId="3847" id="3847"/>
+                <ref-entry baseId="3827" id="3827"/>
+                <ref-entry baseId="3852" id="3852"/>
+                <ref-entry baseId="3895" id="3895"/>
+                <ref-entry baseId="3896" id="3896"/>
+                <ref-entry baseId="3696" name="NewLabel231" id="3696"/>
+                <ref-entry baseId="3897" id="3897"/>
+                <ref-entry baseId="3697" name="NewTextData91" id="3697">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3902" id="3902"/>
+                <ref-entry baseId="106" name="NewLabel22" id="106"/>
+                <ref-entry baseId="3904" id="3904"/>
+                <ref-entry baseId="111" name="NewTextData8" id="111">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3907" id="3907"/>
+                <ref-entry baseId="3908" id="3908"/>
+                <ref-entry baseId="3703" name="NewLabel2311" id="3703">
+                    <property name="text">Sub Projects:</property>
+                </ref-entry>
+                <ref-entry baseId="3909" id="3909"/>
+                <ref-entry baseId="3704" name="NewTextData13" id="3704">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3914" id="3914"/>
+                <ref-entry baseId="3915" id="3915"/>
+                <ref-entry baseId="3916" id="3916"/>
+                <ref-entry baseId="3917" id="3917"/>
+                <ref-entry baseId="3918" id="3918"/>
+                <ref-entry baseId="3785" id="3785"/>
+                <ref-entry baseId="3786" id="3786"/>
+                <ref-entry baseId="85" name="NewLabel21" id="85"/>
+                <ref-entry baseId="3787" id="3787">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="4970" name="NewTextData111" id="4970">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="3828" id="3828">
+                    <property name="textAlign">center</property>
+                </ref-entry>
+                <ref-entry baseId="4971" name="NewImage110" id="4971"/>
+                <ref-entry baseId="4972" name="NewImage28" id="4972"/>
+                <ref-entry baseId="3788" id="3788"/>
+                <ref-entry baseId="86" name="NewLabel24" id="86"/>
+                <ref-entry baseId="3838" id="3838">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="338" name="NewLabel25" id="338">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="3790" id="3790"/>
+                <ref-entry baseId="368" name="NewImage10" id="368"/>
+                <ref-entry baseId="367" name="NewImage9" id="367"/>
+                <ref-entry baseId="3843" id="3843"/>
+                <ref-entry baseId="3821" id="3821"/>
+                <ref-entry baseId="3848" id="3848"/>
+                <ref-entry baseId="4985" id="4985"/>
+                <ref-entry baseId="4986" id="4986"/>
+                <ref-entry baseId="4987" id="4987">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1062" name="NewTextData11" id="1062">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="4988" id="4988">
+                    <property name="textAlign">center</property>
+                </ref-entry>
+                <ref-entry baseId="1001" name="NewImage1" id="1001"/>
+                <ref-entry baseId="1002" name="NewImage2" id="1002"/>
+                <ref-entry baseId="4989" id="4989"/>
+                <ref-entry baseId="4992" id="4992">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="336" name="NewLabel26" id="336">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="4993" id="4993"/>
+                <ref-entry baseId="366" name="NewImage12" id="366"/>
+                <ref-entry baseId="365" name="NewImage11" id="365"/>
+                <ref-entry baseId="4994" id="4994"/>
+                <ref-entry baseId="4995" id="4995"/>
+                <ref-entry baseId="4996" id="4996"/>
+                <ref-entry baseId="4997" id="4997"/>
+                <ref-entry baseId="4998" id="4998"/>
+                <ref-entry baseId="4999" id="4999">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1063" name="NewTextData21" id="1063">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="5000" id="5000">
+                    <property name="textAlign">center</property>
+                </ref-entry>
+                <ref-entry baseId="340" name="NewImage3" id="340"/>
+                <ref-entry baseId="339" name="NewImage4" id="339"/>
+                <ref-entry baseId="5001" id="5001"/>
+                <ref-entry baseId="5004" id="5004">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="337" name="NewLabel27" id="337">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="5005" id="5005"/>
+                <ref-entry baseId="364" name="NewImage14" id="364"/>
+                <ref-entry baseId="363" name="NewImage13" id="363"/>
+                <ref-entry baseId="5006" id="5006"/>
+                <ref-entry baseId="5007" id="5007"/>
+                <ref-entry baseId="5008" id="5008"/>
+                <ref-entry baseId="4973" id="4973"/>
+                <ref-entry baseId="4974" id="4974"/>
+                <ref-entry baseId="4975" id="4975">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1064" name="NewTextData31" id="1064">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="4976" id="4976">
+                    <property name="textAlign">center</property>
+                </ref-entry>
+                <ref-entry baseId="352" name="NewImage5" id="352"/>
+                <ref-entry baseId="353" name="NewImage6" id="353"/>
+                <ref-entry baseId="4977" id="4977"/>
+                <ref-entry baseId="4980" id="4980">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1013" name="NewLabel28" id="1013">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="4981" id="4981"/>
+                <ref-entry baseId="1017" name="NewImage16" id="1017"/>
+                <ref-entry baseId="1015" name="NewImage15" id="1015"/>
+                <ref-entry baseId="4982" id="4982"/>
+                <ref-entry baseId="4983" id="4983"/>
+                <ref-entry baseId="4984" id="4984"/>
+                <ref-entry baseId="5009" id="5009"/>
+                <ref-entry baseId="5010" id="5010"/>
+                <ref-entry baseId="5011" id="5011">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1065" name="NewTextData41" id="1065">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="5012" id="5012">
+                    <property name="textAlign">center</property>
+                </ref-entry>
+                <ref-entry baseId="342" name="NewImage7" id="342"/>
+                <ref-entry baseId="341" name="NewImage8" id="341"/>
+                <ref-entry baseId="5013" id="5013"/>
+                <ref-entry baseId="5016" id="5016">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="1014" name="NewLabel29" id="1014">
+                    <property name="textAlign">right</property>
+                </ref-entry>
+                <ref-entry baseId="5017" id="5017"/>
+                <ref-entry baseId="1018" name="NewImage18" id="1018"/>
+                <ref-entry baseId="1016" name="NewImage17" id="1016"/>
+                <ref-entry baseId="5018" id="5018"/>
+                <ref-entry baseId="5019" id="5019"/>
+                <ref-entry baseId="5020" id="5020"/>
+                <ref-entry baseId="3919" id="3919"/>
+                <ref-entry baseId="3920" id="3920"/>
+                <ref-entry baseId="52" name="NewLabel19" id="52"/>
+                <ref-entry baseId="3921" id="3921"/>
+                <ref-entry baseId="109" name="NewTextData4" id="109">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3925" id="3925"/>
+                <ref-entry baseId="3927" id="3927"/>
+                <ref-entry baseId="3955" id="3955"/>
+                <ref-entry baseId="3956" id="3956"/>
+                <ref-entry baseId="53" name="NewLabel20" id="53"/>
+                <ref-entry baseId="3957" id="3957"/>
+                <ref-entry baseId="108" name="NewTextData7" id="108">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3962" id="3962"/>
+                <ref-entry baseId="3963" id="3963"/>
+                <ref-entry baseId="3964" id="3964"/>
+                <ref-entry baseId="3965" id="3965"/>
+                <ref-entry baseId="3966" id="3966"/>
+                <ref-entry baseId="3931" id="3931"/>
+                <ref-entry baseId="3932" id="3932"/>
+                <ref-entry baseId="55" name="NewLabel23" id="55"/>
+                <ref-entry baseId="3933" id="3933"/>
+                <ref-entry baseId="113" name="NewTextData9" id="113">
+                    <property name="fontFamily">sans-serif</property>
+                    <property name="fontSize">10pt</property>
+                </ref-entry>
+                <ref-entry baseId="3938" id="3938"/>
+                <ref-entry baseId="3939" id="3939"/>
+                <ref-entry baseId="3940" id="3940"/>
+                <ref-entry baseId="3941" id="3941"/>
+                <ref-entry baseId="3942" id="3942"/>
+            </overridden-values>
+        </grid>
+        <table name="Risk Summary Date Format" id="4923" extends="Quay Risk Manager Library.Risk Summary Date Format">
+            <overridden-values>
+                <ref-entry baseId="1287" id="1287"/>
+                <ref-entry baseId="1288" id="1288"/>
+                <ref-entry baseId="1306" name="NewLabel4" id="1306"/>
+                <ref-entry baseId="1315" id="1315"/>
+                <ref-entry baseId="1319" name="NewLabel122" id="1319"/>
+                <ref-entry baseId="1312" id="1312"/>
+                <ref-entry baseId="1318" name="NewLabel121" id="1318"/>
+                <ref-entry baseId="1289" id="1289"/>
+                <ref-entry baseId="1307" name="NewLabel12" id="1307"/>
+                <ref-entry baseId="1290" id="1290"/>
+                <ref-entry baseId="1308" name="NewLabel13" id="1308"/>
+                <ref-entry baseId="1292" id="1292"/>
+                <ref-entry baseId="1293" id="1293"/>
+                <ref-entry baseId="1324" name="NewTextData" id="1324"/>
+                <ref-entry baseId="1316" id="1316"/>
+                <ref-entry baseId="4088" name="NewData5" id="4088"/>
+                <ref-entry baseId="1313" id="1313"/>
+                <ref-entry baseId="4089" name="NewData6" id="4089"/>
+                <ref-entry baseId="1294" id="1294"/>
+                <ref-entry baseId="4090" name="NewData7" id="4090"/>
+                <ref-entry baseId="1295" id="1295"/>
+                <ref-entry baseId="4091" name="NewData8" id="4091"/>
+                <ref-entry baseId="1302" id="1302"/>
+                <ref-entry baseId="1317" id="1317"/>
+                <ref-entry baseId="1314" id="1314"/>
+                <ref-entry baseId="1303" id="1303"/>
+                <ref-entry baseId="1304" id="1304"/>
+            </overridden-values>
+        </table>
+    </body>
+</report>
