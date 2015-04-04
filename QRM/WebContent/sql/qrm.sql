@@ -229,7 +229,7 @@ CREATE TABLE riskproject (
   rgt integer NOT NULL,
   projectRiskManagerID bigint,
   dateUpdated timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  dateEntered timestamp NOT NULL,
+  dateEntered timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   projectDescription varchar(5000),
   projectTitle varchar(500),
   projectStartDate timestamp,
